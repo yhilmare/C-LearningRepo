@@ -23,6 +23,31 @@ void Chapter3(){
 
     int enums{5}, ban = {20};//c++11中的一种赋值方法。
     cout << enums << " " << ban << endl;
+
+    int a = 91, b = 042, c = 0x1a;//不同进制的整形赋值
+    cout << a << " " << b << " " << c << endl;
+    cout << hex << b << endl;//可以通过·传入hex，oct和dec等值来控制输出数字的进制
+    cout << sizeof(long long) << endl;
+    a = 2220UL;
+    cout << dec << a << " " << sizeof(2220uL) << endl;
+
+    char ch = 77;
+    cout << "This input char is " << ch << endl;
+
+    cout.put('2');//这只是一个历史原因，并不常用
+    cout << '$' << endl;
+    cout << "Let them eat g\u00E2teau" << endl;
+    cout << sizeof(wchar_t) << endl;
+    char16_t ann = u'\u00e2';
+    cout << "ann is " << ann << endl;
+
+    const int Month = 12;
+    cout << Month << endl;
+
+    float e = 1.0;
+    float f = 3.0;
+    cout.setf(ios_base::fixed, ios_base::floatfield);//用于强制规定浮点数的打印位数，防止把过大的浮点数打印成E表示的浮点数
+    cout << e / f << endl;
 }
 void Chapter2(){
     /*
