@@ -5,6 +5,7 @@
 #include <cstring>
 #include <vector>
 #include <array>
+#include <ctime>
 
 using std::cout;
 using std::cin;
@@ -12,13 +13,36 @@ using std::cin;
 void Chapter2();
 void Chapter3();
 void Chapter4();
+void Chapter5();
 
 
 int main() {
 //    Chapter2();
 //    Chapter3();
-    Chapter4();
+//    Chapter4();
+    Chapter5();
     return 0;
+}
+
+void Chapter5(){
+    using namespace std;
+    //C++竟然还可以像python一样不写花括号
+    for (int i = 0; i < 2; i ++)
+        cout << "Hello,world" << endl;
+    long delay = 2;
+    delay *= CLOCKS_PER_SEC;
+    clock_t  start = clock();//与python中的clock()函数相似
+    while (clock() - start <= delay);//延迟
+    cout << start << " -> " << clock() << endl;
+
+    //基于范围的for循环，类似于Java中的增强for循环，在C++11中定义
+    double prices[5] = {5.4, 56.3, 5.3, 9.5, 4.3};
+    for (double item : prices)
+        cout << item << endl;
+    for (double &item : prices)//使用&符号代表是传递变量引用，而不仅仅是值传递
+        item *= 10;
+    for (double item : prices)
+        cout << item << endl;
 }
 
 void Chapter4(){
@@ -104,7 +128,6 @@ void Chapter4(){
     };
     inflatable obj = {"David", 20, 19.98};
     cout << obj.name << " - " << obj.price << " - " << obj.volumn << endl;
-
 
     inflatable objs[2] = {
             {
@@ -236,8 +259,7 @@ void Chapter4(){
         int_a[i] = i;
     }
     cout << int_v[2] << endl;
-
-};
+}
 
 void Chapter3(){
     /*
