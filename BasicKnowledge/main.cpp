@@ -3,6 +3,8 @@
 #include <climits>
 #include <string>
 #include <cstring>
+#include <vector>
+#include <array>
 
 using std::cout;
 using std::cin;
@@ -10,6 +12,7 @@ using std::cin;
 void Chapter2();
 void Chapter3();
 void Chapter4();
+
 
 int main() {
 //    Chapter2();
@@ -20,6 +23,7 @@ int main() {
 
 void Chapter4(){
     using namespace std;
+
     //数组
     int array[4] = {1,2,3,5};
     for (int i = 0; i < 4; i ++){
@@ -73,19 +77,167 @@ void Chapter4(){
 //    cout << name1 << name2 << endl;
 
     //string类
-    string str4 = "I love my country";
-    str4 = {"I am Chinese\n"};//不同的string初始化方式
-    string str5{"I love my country"};
-    cout << str4 << " - " << str4.size() << " - " << str4.length() << endl;
-    cout << str4 + str5 << endl;
+//    string str4 = "I love my country";
+//    str4 = {"I am Chinese\n"};//不同的string初始化方式
+//    string str5{"I love my country"};
+//    cout << str4 << " - " << str4.size() << " - " << str4.length() << endl;
+//    cout << str4 + str5 << endl;
+//
+//    char charr[20];
+//    cout << "Length of string in charr before input: "
+//         << strlen(charr) << endl;
+//    string str6;
+//    getline(cin, str6);//一种新的string类型的输入方法
+//    cout << str6 << endl;
+//
+//    string str7 = u8"I am a Chinese, and I love my country";//使用UTF-8编码
+//    cout << str7 << endl;
 
-    char charr[20];
-    cout << "Length of string in charr before input: "
-         << strlen(charr) << endl;
-    string str6;
-    getline(cin, str6);
-    cout << str6 << endl;
-}
+    cout << R"(I am a Chinese, \nand I love my Country)" << endl;//禁止转义
+    cout << R"asd((Please tell my who yu are), I love you)asd" << endl;//看书吧，p88有解释，这里主要是为了解决字符串中带括号的情况
+
+    //结构体
+    struct inflatable{
+        std::string name;
+        float volumn;
+        double price;
+    };
+    inflatable obj = {"David", 20, 19.98};
+    cout << obj.name << " - " << obj.price << " - " << obj.volumn << endl;
+
+
+    inflatable objs[2] = {
+            {
+                "David",
+                56,
+                15.69
+            },{
+                "Smith",
+                96,
+                13.59
+            }
+    };
+    cout << objs[0].name << endl;
+
+    //共用体
+    struct widget{
+        std::string name;
+        int type;
+        union {
+            /*
+             * 共用体，用于一个字段的类型可能是多种的情况下，
+             * 例如这个例子中id的类型可能是一个长整形，
+             * 也可能是一个字符数组型，这里就可以用到共用体。
+             * */
+            long id_num;
+            char id_str[20];
+        };
+    };
+    widget obj1[2] = {
+            {
+                "BMW",
+                20
+            }, {
+                "AUTO",
+                56
+            }
+    };
+//    for (int i = 0; i < 2; i ++){
+//        if (obj1[i].type == 20){
+//            obj1[i].id_num = 15464;
+//        }else{
+//            cin >> obj1[i].id_str;
+//        }
+//    }
+//    cout << obj1[1].id_str << endl;
+
+    //枚举类型
+    enum spectrum {
+        /*
+         * 枚举类型本质上还是整形，从0开始递增
+         * */
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        violet = 100,
+        indigo,
+        ultraviolet
+    };
+    spectrum band;
+    int color = blue + 1;
+    cout << color << endl;
+    cout << blue << " - " << ultraviolet << endl;
+    band = spectrum(112);//枚举值由于还是以int型存在的，因此也可以将枚举值赋值成为期不存在的枚举值，只要不超过其最大上限和小于最小下限。
+    cout << band << endl;
+
+    //指针
+    double doughnut_1 = 15.69;
+    int doughnut = 20;
+    int *doughnut_p = &doughnut;
+    cout << doughnut_p << " - " << &doughnut_1 << " - " << &doughnut << endl;
+
+    int *p_int = (int *)malloc(sizeof(int));
+    double *p_double = new double;
+    *p_int = 25;
+    *p_double = 15.56;
+    cout << *p_int << " - " << *p_double << endl;
+    delete p_int;
+    delete p_double;
+
+    int *p_array = new int[3];
+    p_array[0] = 120;
+    p_array[1] = 128;
+    p_array[2] = 133;
+    cout << (*p_array) << " -> " << *(p_array + 1) << " -> " << p_array[2] << endl;
+    delete [] p_array;
+
+    int a_array[3] = {155, 122, 145};
+    int *a_p = a_array;
+    int *a_p_1 = &a_array[0];
+    cout << sizeof(a_array) << " -> " << sizeof(a_p) << endl;//对数组和指针使用sizeof函数，前者将得到的是数组的大小，而后者得到的是指针的大小
+    cout << a_p[0] << " -> " << *(a_p + 1) << " -> " << *(a_p_1 + 2) << endl;
+
+    //指针与数组
+    char animal[20] = "animal";
+    /*
+     * 就如同cout << "bear"可以被打印出来一样，字符串字面量代表着该字符串的首地址，
+     * 因此这样的赋值是可以接受的，而int *a = 25这样的操作是禁止的，因为a并没有被初始化。
+     * */
+    const char *bear = "bear";
+    char *ps;
+    ps = animal;
+    cout << animal << " - " << ps << endl;
+    cin >> animal;
+    cout << animal << " - " << ps << endl;
+    cout << "animal at " << (int *)animal << endl;
+    cout << "ps at " << (int *)ps << endl;
+
+    struct stu {
+        std::string name;
+    };
+    stu oj1, oj2, oj3;
+    oj1.name = "Daivd";
+    oj2.name = "Smith";
+    oj3.name = "Ann";
+    stu *p[3] = {&oj1, &oj2, &oj3};
+    stu **pStu = p;//两个*号通常都是指向指针数组的指针，一定要记住
+    cout << pStu[0]->name << " -> " << pStu[1]->name << " -> " << pStu[2]->name << endl;
+    cout << pStu[0] << " -> " << pStu[1] << " -> " << pStu[2] << endl;
+
+    //vector与array
+    vector<int> int_v(3);//这就是vector模板类的初始化方式，后面的括号是该vector的容量，可以用变量代替，意味着其大小在程序运行时时可变的。
+    std::array<int, 3> int_a = {1, 2, 3};
+    for (int i = 0; i < int_v.capacity(); i ++){
+        int_v[i] = i;
+    }
+    for (int i = 0; i < int_a.size(); i ++){
+        int_a[i] = i;
+    }
+    cout << int_v[2] << endl;
+
+};
 
 void Chapter3(){
     /*
