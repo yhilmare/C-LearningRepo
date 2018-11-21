@@ -17,6 +17,7 @@ void Chapter3();
 void Chapter4();
 void Chapter5();
 void Chapter6();
+void Chapter7();
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
 int main() {
@@ -24,8 +25,14 @@ int main() {
 //    Chapter3();
 //    Chapter4();
 //    Chapter5();
-    Chapter6();
+//    Chapter6();
+    Chapter7();
     return 0;
+}
+
+void Chapter7(){
+    using namespace std;
+    cout << "Hello,world" << endl;
 }
 void Chapter6(){
     using namespace std;
