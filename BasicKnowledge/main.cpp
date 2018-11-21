@@ -26,20 +26,20 @@ int main() {
 
 void Chapter5(){
     using namespace std;
-    //C++ç«Ÿç„¶è¿˜å¯ä»¥åƒpythonä¸€æ ·ä¸å†™èŠ±æ‹¬å·
+    //C++¾¹È»»¹¿ÉÒÔÏñpythonÒ»Ñù²»Ğ´»¨À¨ºÅ
     for (int i = 0; i < 2; i ++)
         cout << "Hello,world" << endl;
     long delay = 2;
     delay *= CLOCKS_PER_SEC;
-    clock_t  start = clock();//ä¸pythonä¸­çš„clock()å‡½æ•°ç›¸ä¼¼
-    while (clock() - start <= delay);//å»¶è¿Ÿ
+    clock_t  start = clock();//ÓëpythonÖĞµÄclock()º¯ÊıÏàËÆ
+    while (clock() - start <= delay);//ÑÓ³Ù
     cout << start << " -> " << clock() << endl;
 
-    //åŸºäºèŒƒå›´çš„forå¾ªç¯ï¼Œç±»ä¼¼äºJavaä¸­çš„å¢å¼ºforå¾ªç¯ï¼Œåœ¨C++11ä¸­å®šä¹‰
+    //»ùÓÚ·¶Î§µÄforÑ­»·£¬ÀàËÆÓÚJavaÖĞµÄÔöÇ¿forÑ­»·£¬ÔÚC++11ÖĞ¶¨Òå
     double prices[5] = {5.4, 56.3, 5.3, 9.5, 4.3};
     for (double item : prices)
         cout << item << endl;
-    for (double &item : prices)//ä½¿ç”¨&ç¬¦å·ä»£è¡¨æ˜¯ä¼ é€’å˜é‡å¼•ç”¨ï¼Œè€Œä¸ä»…ä»…æ˜¯å€¼ä¼ é€’
+    for (double &item : prices)//Ê¹ÓÃ&·ûºÅ´ú±íÊÇ´«µİ±äÁ¿ÒıÓÃ£¬¶ø²»½ö½öÊÇÖµ´«µİ
         item *= 10;
     for (double item : prices)
         cout << item << endl;
@@ -47,13 +47,12 @@ void Chapter5(){
 
 void Chapter4(){
     using namespace std;
-
-    //æ•°ç»„
+    //Êı×é
     int array[4] = {1,2,3,5};
     for (int i = 0; i < 4; i ++){
         cout << array[i] << endl;
     }
-    int a[5] = {1, 2};//è‹¥åªå¯¹æ•°ç»„çš„ä¸€éƒ¨åˆ†èµ‹å€¼ï¼Œåˆ™å…¶ä½™éƒ¨åˆ†ä¸º0
+    int a[5] = {1, 2};//ÈôÖ»¶ÔÊı×éµÄÒ»²¿·Ö¸³Öµ£¬ÔòÆäÓà²¿·ÖÎª0
     for (int i = 0; i < 5; i ++){
         cout << a[i] << endl;
     }
@@ -66,7 +65,7 @@ void Chapter4(){
             cout << b[i] << endl;
         }
     }
-    //å­—ç¬¦ä¸²
+    //×Ö·û´®
     char str[] = "I love my country";
     cout << str << endl;
     char str1[] = {'I', ' ', 'l', 'o', 'v', 'e', ' ', 'm', 'y', ' ', 'c', 'o', 'u', 'n', 't', 'r', 'y', 0};
@@ -74,8 +73,8 @@ void Chapter4(){
     char str2[8] = {'I', ' ', 'l', 'o', 0, 'v', 'e', ' '};
     cout << str2 << endl;
     /*
-     * ä¼ ç»Ÿçš„cinè¾“å…¥ä»¥ç©ºæ ¼ä¸ºè¾“å…¥åˆ†å‰²ï¼Œè‹¥è¦è¾“å…¥çš„ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­å¸¦æœ‰ç©ºæ ¼ï¼Œåˆ™ä¸èƒ½å¾ˆå¥½åœ°å½•å…¥ï¼Œ
-     * åªèƒ½å½•å…¥ç©ºæ ¼å‰çš„å­—ç¬¦ä¸²ï¼Œç©ºæ ¼åçš„å­—ç¬¦ä¸²ä¼šè¢«ç¼“å­˜åˆ°è¾“å…¥é˜Ÿåˆ—ä¸­ä¾›åé¢çš„è¾“å…¥ä½¿ç”¨
+     * ´«Í³µÄcinÊäÈëÒÔ¿Õ¸ñÎªÊäÈë·Ö¸î£¬ÈôÒªÊäÈëµÄÒ»¸ö×Ö·û´®ÖĞ´øÓĞ¿Õ¸ñ£¬Ôò²»ÄÜºÜºÃµØÂ¼Èë£¬
+     * Ö»ÄÜÂ¼Èë¿Õ¸ñÇ°µÄ×Ö·û´®£¬¿Õ¸ñºóµÄ×Ö·û´®»á±»»º´æµ½ÊäÈë¶ÓÁĞÖĞ¹©ºóÃæµÄÊäÈëÊ¹ÓÃ
      * */
 //    const int size = 20;
 //    char name[size];
@@ -87,22 +86,22 @@ void Chapter4(){
 //    cout << "I have some delicious " << desert << " for you, " << name << endl;
 
 //    char str3[30];
-//    cin.getline(str3, 30);//ä¸€å…±ä¸¤ä¸ªå‚æ•°ï¼Œç¬¬ä¸€ä¸ªå‚æ•°è¯´æ˜è¦è¯»å…¥çš„ç›®æ ‡å­—ç¬¦ä¸²ï¼Œç¬¬äºŒä¸ªå‚æ•°è¯´æ˜è¦è¯»å…¥çš„é•¿åº¦ï¼Œä»¥æ¢è¡ŒEnterä¸ºç»“å°¾ï¼Œä¸ä¿ç•™æ¢è¡Œç¬¦
+//    cin.getline(str3, 30);//Ò»¹²Á½¸ö²ÎÊı£¬µÚÒ»¸ö²ÎÊıËµÃ÷Òª¶ÁÈëµÄÄ¿±ê×Ö·û´®£¬µÚ¶ş¸ö²ÎÊıËµÃ÷Òª¶ÁÈëµÄ³¤¶È£¬ÒÔ»»ĞĞEnterÎª½áÎ²£¬²»±£Áô»»ĞĞ·û
 //    cout << str3 << endl;
 //    char name1[30];
 //    char name2[30];
 //    cin.getline(name1, 30).getline(name2, 30);
 //    cin.get(name1, 30).get();
     /*
-     * è¿™æ ·æ˜¯ç”±äºcin.getå‡½æ•°ä¸æ¥å—æ¢è¡Œç¬¦ï¼Œå› æ­¤æ¢è¡Œç¬¦ä¿ç•™åœ¨è¾“å…¥ç¼“å†²é‡Œï¼Œ
-     * å½“ä¸‹ä¸€ä¸ªè¾“å…¥åˆ°æ¥æ—¶å°±ä¼šå°†è¿™ä¸ªæ¢è¡Œç¬¦ä½œä¸ºç¬¬ä¸€ä¸ªè¾“å…¥ä»è€Œå¯¼è‡´é”™è¯¯ï¼Œå› æ­¤ç”¨ä¸€ä¸ªcin.getåœ¨è¿™é‡Œæ¥ä½è¿™ä¸ªæ¢è¡Œç¬¦ã€‚
+     * ÕâÑùÊÇÓÉÓÚcin.getº¯Êı²»½ÓÊÜ»»ĞĞ·û£¬Òò´Ë»»ĞĞ·û±£ÁôÔÚÊäÈë»º³åÀï£¬
+     * µ±ÏÂÒ»¸öÊäÈëµ½À´Ê±¾Í»á½«Õâ¸ö»»ĞĞ·û×÷ÎªµÚÒ»¸öÊäÈë´Ó¶øµ¼ÖÂ´íÎó£¬Òò´ËÓÃÒ»¸öcin.getÔÚÕâÀï½Ó×¡Õâ¸ö»»ĞĞ·û¡£
      * */
 //    cin.get(name2, 30);
 //    cout << name1 << name2 << endl;
 
-    //stringç±»
+    //stringÀà
 //    string str4 = "I love my country";
-//    str4 = {"I am Chinese\n"};//ä¸åŒçš„stringåˆå§‹åŒ–æ–¹å¼
+//    str4 = {"I am Chinese\n"};//²»Í¬µÄstring³õÊ¼»¯·½Ê½
 //    string str5{"I love my country"};
 //    cout << str4 << " - " << str4.size() << " - " << str4.length() << endl;
 //    cout << str4 + str5 << endl;
@@ -111,16 +110,16 @@ void Chapter4(){
 //    cout << "Length of string in charr before input: "
 //         << strlen(charr) << endl;
 //    string str6;
-//    getline(cin, str6);//ä¸€ç§æ–°çš„stringç±»å‹çš„è¾“å…¥æ–¹æ³•
+//    getline(cin, str6);//Ò»ÖÖĞÂµÄstringÀàĞÍµÄÊäÈë·½·¨
 //    cout << str6 << endl;
 //
-//    string str7 = u8"I am a Chinese, and I love my country";//ä½¿ç”¨UTF-8ç¼–ç 
+//    string str7 = u8"I am a Chinese, and I love my country";//Ê¹ÓÃUTF-8±àÂë
 //    cout << str7 << endl;
 
-    cout << R"(I am a Chinese, \nand I love my Country)" << endl;//ç¦æ­¢è½¬ä¹‰
-    cout << R"asd((Please tell my who yu are), I love you)asd" << endl;//çœ‹ä¹¦å§ï¼Œp88æœ‰è§£é‡Šï¼Œè¿™é‡Œä¸»è¦æ˜¯ä¸ºäº†è§£å†³å­—ç¬¦ä¸²ä¸­å¸¦æ‹¬å·çš„æƒ…å†µ
+    cout << R"(I am a Chinese, \nand I love my Country)" << endl;//½ûÖ¹×ªÒå
+    cout << R"asd((Please tell my who yu are), I love you)asd" << endl;//¿´Êé°É£¬p88ÓĞ½âÊÍ£¬ÕâÀïÖ÷ÒªÊÇÎªÁË½â¾ö×Ö·û´®ÖĞ´øÀ¨ºÅµÄÇé¿ö
 
-    //ç»“æ„ä½“
+    //½á¹¹Ìå
     struct inflatable{
         std::string name;
         float volumn;
@@ -142,15 +141,15 @@ void Chapter4(){
     };
     cout << objs[0].name << endl;
 
-    //å…±ç”¨ä½“
+    //¹²ÓÃÌå
     struct widget{
         std::string name;
         int type;
         union {
             /*
-             * å…±ç”¨ä½“ï¼Œç”¨äºä¸€ä¸ªå­—æ®µçš„ç±»å‹å¯èƒ½æ˜¯å¤šç§çš„æƒ…å†µä¸‹ï¼Œ
-             * ä¾‹å¦‚è¿™ä¸ªä¾‹å­ä¸­idçš„ç±»å‹å¯èƒ½æ˜¯ä¸€ä¸ªé•¿æ•´å½¢ï¼Œ
-             * ä¹Ÿå¯èƒ½æ˜¯ä¸€ä¸ªå­—ç¬¦æ•°ç»„å‹ï¼Œè¿™é‡Œå°±å¯ä»¥ç”¨åˆ°å…±ç”¨ä½“ã€‚
+             * ¹²ÓÃÌå£¬ÓÃÓÚÒ»¸ö×Ö¶ÎµÄÀàĞÍ¿ÉÄÜÊÇ¶àÖÖµÄÇé¿öÏÂ£¬
+             * ÀıÈçÕâ¸öÀı×ÓÖĞidµÄÀàĞÍ¿ÉÄÜÊÇÒ»¸ö³¤ÕûĞÎ£¬
+             * Ò²¿ÉÄÜÊÇÒ»¸ö×Ö·ûÊı×éĞÍ£¬ÕâÀï¾Í¿ÉÒÔÓÃµ½¹²ÓÃÌå¡£
              * */
             long id_num;
             char id_str[20];
@@ -174,10 +173,10 @@ void Chapter4(){
 //    }
 //    cout << obj1[1].id_str << endl;
 
-    //æšä¸¾ç±»å‹
+    //Ã¶¾ÙÀàĞÍ
     enum spectrum {
         /*
-         * æšä¸¾ç±»å‹æœ¬è´¨ä¸Šè¿˜æ˜¯æ•´å½¢ï¼Œä»0å¼€å§‹é€’å¢
+         * Ã¶¾ÙÀàĞÍ±¾ÖÊÉÏ»¹ÊÇÕûĞÎ£¬´Ó0¿ªÊ¼µİÔö
          * */
         red,
         orange,
@@ -192,10 +191,10 @@ void Chapter4(){
     int color = blue + 1;
     cout << color << endl;
     cout << blue << " - " << ultraviolet << endl;
-    band = spectrum(112);//æšä¸¾å€¼ç”±äºè¿˜æ˜¯ä»¥intå‹å­˜åœ¨çš„ï¼Œå› æ­¤ä¹Ÿå¯ä»¥å°†æšä¸¾å€¼èµ‹å€¼æˆä¸ºæœŸä¸å­˜åœ¨çš„æšä¸¾å€¼ï¼Œåªè¦ä¸è¶…è¿‡å…¶æœ€å¤§ä¸Šé™å’Œå°äºæœ€å°ä¸‹é™ã€‚
+    band = spectrum(112);//Ã¶¾ÙÖµÓÉÓÚ»¹ÊÇÒÔintĞÍ´æÔÚµÄ£¬Òò´ËÒ²¿ÉÒÔ½«Ã¶¾ÙÖµ¸³Öµ³ÉÎªÆÚ²»´æÔÚµÄÃ¶¾ÙÖµ£¬Ö»Òª²»³¬¹ıÆä×î´óÉÏÏŞºÍĞ¡ÓÚ×îĞ¡ÏÂÏŞ¡£
     cout << band << endl;
 
-    //æŒ‡é’ˆ
+    //Ö¸Õë
     double doughnut_1 = 15.69;
     int doughnut = 20;
     int *doughnut_p = &doughnut;
@@ -219,14 +218,14 @@ void Chapter4(){
     int a_array[3] = {155, 122, 145};
     int *a_p = a_array;
     int *a_p_1 = &a_array[0];
-    cout << sizeof(a_array) << " -> " << sizeof(a_p) << endl;//å¯¹æ•°ç»„å’ŒæŒ‡é’ˆä½¿ç”¨sizeofå‡½æ•°ï¼Œå‰è€…å°†å¾—åˆ°çš„æ˜¯æ•°ç»„çš„å¤§å°ï¼Œè€Œåè€…å¾—åˆ°çš„æ˜¯æŒ‡é’ˆçš„å¤§å°
+    cout << sizeof(a_array) << " -> " << sizeof(a_p) << endl;//¶ÔÊı×éºÍÖ¸ÕëÊ¹ÓÃsizeofº¯Êı£¬Ç°Õß½«µÃµ½µÄÊÇÊı×éµÄ´óĞ¡£¬¶øºóÕßµÃµ½µÄÊÇÖ¸ÕëµÄ´óĞ¡
     cout << a_p[0] << " -> " << *(a_p + 1) << " -> " << *(a_p_1 + 2) << endl;
 
-    //æŒ‡é’ˆä¸æ•°ç»„
+    //Ö¸ÕëÓëÊı×é
     char animal[20] = "animal";
     /*
-     * å°±å¦‚åŒcout << "bear"å¯ä»¥è¢«æ‰“å°å‡ºæ¥ä¸€æ ·ï¼Œå­—ç¬¦ä¸²å­—é¢é‡ä»£è¡¨ç€è¯¥å­—ç¬¦ä¸²çš„é¦–åœ°å€ï¼Œ
-     * å› æ­¤è¿™æ ·çš„èµ‹å€¼æ˜¯å¯ä»¥æ¥å—çš„ï¼Œè€Œint *a = 25è¿™æ ·çš„æ“ä½œæ˜¯ç¦æ­¢çš„ï¼Œå› ä¸ºaå¹¶æ²¡æœ‰è¢«åˆå§‹åŒ–ã€‚
+     * ¾ÍÈçÍ¬cout << "bear"¿ÉÒÔ±»´òÓ¡³öÀ´Ò»Ñù£¬×Ö·û´®×ÖÃæÁ¿´ú±í×Å¸Ã×Ö·û´®µÄÊ×µØÖ·£¬
+     * Òò´ËÕâÑùµÄ¸³ÖµÊÇ¿ÉÒÔ½ÓÊÜµÄ£¬¶øint *a = 25ÕâÑùµÄ²Ù×÷ÊÇ½ûÖ¹µÄ£¬ÒòÎªa²¢Ã»ÓĞ±»³õÊ¼»¯¡£
      * */
     const char *bear = "bear";
     char *ps;
@@ -245,12 +244,12 @@ void Chapter4(){
     oj2.name = "Smith";
     oj3.name = "Ann";
     stu *p[3] = {&oj1, &oj2, &oj3};
-    stu **pStu = p;//ä¸¤ä¸ª*å·é€šå¸¸éƒ½æ˜¯æŒ‡å‘æŒ‡é’ˆæ•°ç»„çš„æŒ‡é’ˆï¼Œä¸€å®šè¦è®°ä½
+    stu **pStu = p;//Á½¸ö*ºÅÍ¨³£¶¼ÊÇÖ¸ÏòÖ¸ÕëÊı×éµÄÖ¸Õë£¬Ò»¶¨Òª¼Ç×¡
     cout << pStu[0]->name << " -> " << pStu[1]->name << " -> " << pStu[2]->name << endl;
     cout << pStu[0] << " -> " << pStu[1] << " -> " << pStu[2] << endl;
 
-    //vectorä¸array
-    vector<int> int_v(3);//è¿™å°±æ˜¯vectoræ¨¡æ¿ç±»çš„åˆå§‹åŒ–æ–¹å¼ï¼Œåé¢çš„æ‹¬å·æ˜¯è¯¥vectorçš„å®¹é‡ï¼Œå¯ä»¥ç”¨å˜é‡ä»£æ›¿ï¼Œæ„å‘³ç€å…¶å¤§å°åœ¨ç¨‹åºè¿è¡Œæ—¶æ—¶å¯å˜çš„ã€‚
+    //vectorÓëarray
+    vector<int> int_v(3);//Õâ¾ÍÊÇvectorÄ£°åÀàµÄ³õÊ¼»¯·½Ê½£¬ºóÃæµÄÀ¨ºÅÊÇ¸ÃvectorµÄÈİÁ¿£¬¿ÉÒÔÓÃ±äÁ¿´úÌæ£¬ÒâÎ¶×ÅÆä´óĞ¡ÔÚ³ÌĞòÔËĞĞÊ±Ê±¿É±äµÄ¡£
     std::array<int, 3> int_a = {1, 2, 3};
     for (int i = 0; i < int_v.capacity(); i ++){
         int_v[i] = i;
@@ -263,17 +262,17 @@ void Chapter4(){
 
 void Chapter3(){
     /*
-     * ç¬¬ä¸‰ç« çš„éƒ¨åˆ†ä»£ç 
+     * µÚÈıÕÂµÄ²¿·Ö´úÂë
      * */
-    using namespace std;//å¯ä»¥åœ¨å‡½æ•°å†…éƒ¨ä½¿ç”¨è¿™æ¡usingç¼–è¯‘æŒ‡ä»¤ï¼Œä½œç”¨åŸŸä¸ºè¯¥å‡½æ•°ä½“å†…éƒ¨ã€‚
+    using namespace std;//¿ÉÒÔÔÚº¯ÊıÄÚ²¿Ê¹ÓÃÕâÌõusing±àÒëÖ¸Áî£¬×÷ÓÃÓòÎª¸Ãº¯ÊıÌåÄÚ²¿¡£
     cout << "max char is " << CHAR_MAX << ", max int is " << INT_MAX << ", short int is " << SHRT_MIN << endl;
 
-    int enums{5}, ban = {20};//c++11ä¸­çš„ä¸€ç§èµ‹å€¼æ–¹æ³•ã€‚
+    int enums{5}, ban = {20};//c++11ÖĞµÄÒ»ÖÖ¸³Öµ·½·¨¡£
     cout << enums << " " << ban << endl;
 
-    int a = 91, b = 042, c = 0x1a;//ä¸åŒè¿›åˆ¶çš„æ•´å½¢èµ‹å€¼
+    int a = 91, b = 042, c = 0x1a;//²»Í¬½øÖÆµÄÕûĞÎ¸³Öµ
     cout << a << " " << b << " " << c << endl;
-    cout << hex << b << endl;//å¯ä»¥é€šè¿‡Â·ä¼ å…¥hexï¼Œoctå’Œdecç­‰å€¼æ¥æ§åˆ¶è¾“å‡ºæ•°å­—çš„è¿›åˆ¶
+    cout << hex << b << endl;//¿ÉÒÔÍ¨¹ı¡¤´«Èëhex£¬octºÍdecµÈÖµÀ´¿ØÖÆÊä³öÊı×ÖµÄ½øÖÆ
     cout << sizeof(long long) << endl;
     a = 2220UL;
     cout << dec << a << " " << sizeof(2220uL) << endl;
@@ -281,7 +280,7 @@ void Chapter3(){
     char ch = 77;
     cout << "This input char is " << ch << endl;
 
-    cout.put('2');//è¿™åªæ˜¯ä¸€ä¸ªå†å²åŸå› ï¼Œå¹¶ä¸å¸¸ç”¨
+    cout.put('2');//ÕâÖ»ÊÇÒ»¸öÀúÊ·Ô­Òò£¬²¢²»³£ÓÃ
     cout << '$' << endl;
     cout << "Let them eat g\u00E2teau" << endl;
     cout << sizeof(wchar_t) << endl;
@@ -293,16 +292,16 @@ void Chapter3(){
 
     float e = 1.0;
     float f = 3.0;
-    cout.setf(ios_base::fixed, ios_base::floatfield);//ç”¨äºå¼ºåˆ¶è§„å®šæµ®ç‚¹æ•°çš„æ‰“å°ä½æ•°ï¼Œé˜²æ­¢æŠŠè¿‡å¤§çš„æµ®ç‚¹æ•°æ‰“å°æˆEè¡¨ç¤ºçš„æµ®ç‚¹æ•°
+    cout.setf(ios_base::fixed, ios_base::floatfield);//ÓÃÓÚÇ¿ÖÆ¹æ¶¨¸¡µãÊıµÄ´òÓ¡Î»Êı£¬·ÀÖ¹°Ñ¹ı´óµÄ¸¡µãÊı´òÓ¡³ÉE±íÊ¾µÄ¸¡µãÊı
     cout << e / f << endl;
 
     int thorn = 3;
-    double thorn_d = static_cast<double>(thorn);//å¼ºåˆ¶è½¬æ¢
+    double thorn_d = static_cast<double>(thorn);//Ç¿ÖÆ×ª»»
     cout << thorn_d << endl;
 }
 void Chapter2(){
     /*
-     * ç¬¬äºŒç« çš„éƒ¨åˆ†ä»£ç 
+     * µÚ¶şÕÂµÄ²¿·Ö´úÂë
      * */
     int count=15;
     for (int i = 0; i < count; i ++){
