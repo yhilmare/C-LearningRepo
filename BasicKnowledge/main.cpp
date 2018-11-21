@@ -49,6 +49,18 @@ void Chapter6(){
     out << "0x" << 128 / 5 << endl;
     out.close();
 
+    char content[1000];
+    ifstream input;
+    input.open(inputPath);
+    if (!input.is_open()){//检查是否已经被打开
+        exit(EXIT_FAILURE);
+    }
+    while (input){
+        input.getline(content, 1000);
+        cout << content << endl;
+    }
+    input.close();
+
 }
 void Chapter5(){
     using namespace std;
