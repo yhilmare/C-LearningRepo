@@ -6,6 +6,7 @@
 #include <vector>
 #include <array>
 #include <ctime>
+#include <cctype>
 
 using std::cout;
 using std::cin;
@@ -14,16 +15,25 @@ void Chapter2();
 void Chapter3();
 void Chapter4();
 void Chapter5();
-
+void Chapter6();
 
 int main() {
 //    Chapter2();
 //    Chapter3();
 //    Chapter4();
-    Chapter5();
+//    Chapter5();
+    Chapter6();
     return 0;
 }
-
+void Chapter6(){
+    using namespace std;
+    char val = 'a';
+    if (isalnum(val)){
+        cout << "yes" << endl;
+    }else{
+        cout << "no" << endl;
+    }
+}
 void Chapter5(){
     using namespace std;
     //C++竟然还可以像python一样不写花括号
@@ -43,6 +53,33 @@ void Chapter5(){
         item *= 10;
     for (double item : prices)
         cout << item << endl;
+
+    char val[20];
+    cout << "Enter the char: " << endl;
+    cin.get(val, 20).get();
+    cin.clear();
+    while (strcmp(val, "quit")){
+        cout << val << endl;
+        cin.get(val, 20).get();
+    }
+
+    const int matrix[4][5] = {
+        {
+            1,2,3,4,5
+        },{
+            2,3,4,5,6
+        },{
+            3,4,5,6,7
+        },{
+            4,5,6,7,8
+        }
+    };
+    for (int i = 0; i < 4; i ++){
+        for (int j = 0; j < 5; j ++){
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
 
 void Chapter4(){
