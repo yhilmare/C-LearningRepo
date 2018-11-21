@@ -7,6 +7,7 @@
 #include <array>
 #include <ctime>
 #include <cctype>
+#include <fstream>
 
 using std::cout;
 using std::cin;
@@ -16,7 +17,8 @@ void Chapter3();
 void Chapter4();
 void Chapter5();
 void Chapter6();
-
+const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
+const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
 int main() {
 //    Chapter2();
 //    Chapter3();
@@ -33,6 +35,20 @@ void Chapter6(){
     }else{
         cout << "no" << endl;
     }
+
+    //文件的读取和写入
+    ofstream out;
+    out.open(outputPath);
+    string fileContent = u8"我是一个好人";
+    out.setf(ios_base::hex, ios_base::basefield);//设置格式化输出项目
+    out.setf(ios_base::right, ios_base::adjustfield);
+    out.precision(5);//设置运算精度
+    out.setf(ios_base::showpoint);//显示小数点
+    out << fileContent;
+    out << endl;
+    out << "0x" << 128 / 5 << endl;
+    out.close();
+
 }
 void Chapter5(){
     using namespace std;
