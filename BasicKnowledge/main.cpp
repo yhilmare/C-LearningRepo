@@ -18,6 +18,7 @@ void Chapter4();
 void Chapter5();
 void Chapter6();
 void Chapter7();
+
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
 int main() {
@@ -54,6 +55,54 @@ int sumArrayRange(const int *pHead, const int *pEnd){//´ÓÊý×éÖÐÈ¡Ò»¶¨µÄ·¶Î§½øÐÐ²
     }
     return sum;
 }
+
+int sumTwoDimMatrix(int (*p)[3], int row){
+    int sum = 0;
+    for (int i = 0; i < row; i ++){
+        for (int j = 0; j < 3; j ++){
+            sum += *(*(p + i) + j);
+        }
+    }
+    return sum;
+}
+
+std::string show_string(std::string *str){
+    std::string str1 = "I am a Chinese";
+    /*
+     * ËäÈ»²ÎÊýÊÇÒ»¸östringÀàÐÍµÄÖ¸Õë£¬µ«ÊÇÕâ¸öÖ¸ÕëÒ²Ö»ÊÇÔ­ÓÐÖ¸ÕëµÄÒ»¸ö¿½±´¡£
+     * °ÑËüÖ¸Ïò±ðµÄÄÚ´æµØÖ·Ò²Ö»ÊÇ½«¿½±´Ö¸Ïò±ðµÄµØÖ·£¬µ±º¯Êý½áÊøÕâ¸ö¿½±´Ò²»á±»É¾³ý£¬¶ÔÔ­ÓÐÖ¸Õë²»»áÔì³ÉÈÎºÎÓ°Ïì
+     * */
+    str = &str1;
+    return str1;
+}
+void show(std::array<std::string, 4> obj){
+    for (int i = 0; i < obj.size(); i ++){
+        cout << obj[i] << " ";
+    }
+}
+
+void modify_array(std::array<std::string, 4> *obj){
+    for (int i = 0; i < (*obj).size(); i ++){
+        (*obj)[i] += "-er";
+    }
+}
+
+void show_vec(std::vector<int> obj){
+    for (int i = 0; i < obj.size(); i ++){
+        cout << obj[i] << " ";
+    }
+}
+
+int recurs(int count){
+    if (count == 1){
+        return 1;
+    }
+    return count + recurs(count - 1);
+}
+
+double pam(int);
+void estimate(int line, double (*pf)(int));
+
 void Chapter7(){
     using namespace std;
     simple(3, 5.6, 2.5);//´«µÝ¿É±ä²ÎÊý
@@ -68,6 +117,68 @@ void Chapter7(){
         cout << a << " -> ";
     }
     cout << endl << sumArrayRange((array + 5), (array + 9)) << endl;
+
+    /*
+     * Õâ¶Î´úÂëºÜºÃµÄÚ¹ÊÍÁËconstºÍ*µÄ¹ØÏµ£¬ÖØµãÔÚÓÚconstËùÔÚµÄÎ»ÖÃ¡£
+     * ¾ÙÀýÀ´Ëµ¡°Èç¹ûconstÔÚ*µÄ×ó±ß£¬Ôò*valÊÇconstµÄ£¬¶øval±¾ÉíÔò²»ÊÇ
+     * ÈôconstÔÚ*µÄÓÒ±ß£¬Ôòval±¾ÉíÊÇconstµÄ£¬µ«ÊÇ*valÈ´²»ÊÇ¡£
+     * */
+    int a = 20;
+    const int *pa = &a;
+    int b = 40;
+    pa = &b;
+    cout << "*pa is " << *pa << endl;
+    int * const pa_1 = &a;
+    *pa_1 = 55;
+    cout << "a is " << a << endl;
+    //¶þÎ¬Êý×é
+    int matrix[2][3] = {
+            {1,2,3},
+            {4,5,6}
+    };
+    cout << sumTwoDimMatrix(matrix, 2) << endl;
+    //Êý×éµØÖ·
+    int at[5] = {1,2,3,4,5};
+    int (*atp)[5] = &at;
+    int *atpp = at;
+    cout << (*atp)[0] << endl;
+    //ÔÚº¯ÊýÖÐÊ¹ÓÃstring
+    string str = "I love my country";//stringÀàÐÍµÄ²Ù×÷²Î¿¼java
+    show_string(&str);//´«µÝÖ¸ÕëÊ±£¬ÆäÊµÒ²ÊÇ´«µÝÁËÒ»¸öÖ¸ÕëµÄ¿½±´
+    cout << str << endl;
+    //vector
+    vector<int> vec(4);
+    for(int i = 0; i < vec.size(); i ++){
+        vec[i] = i * i;
+    }
+    show_vec(vec);
+    cout << endl << "array content is " << endl;
+    //array
+    std::array<std::string, 4> ary = {"spring", "summer", "autumn", "winter"};
+    show(ary);
+    modify_array(&ary);
+    cout << endl;
+    show(ary);
+    //µÝ¹é
+    cout << endl << recurs(100) << endl;
+
+    //º¯ÊýÖ¸Õë
+    estimate(10, pam);
+
+}
+
+double pam(int n){
+    if (n == 0){
+        return n;
+    }
+    return n + pam(n - 1);
+}
+
+void estimate(int lines, double (*pf)(int)){
+    double result = (*pf)(lines);
+    double res = pf(lines);
+    cout << "The Result of estimation is " << result << " - " << res << std::endl;
+    return;
 }
 
 void Chapter6(){
