@@ -29,11 +29,47 @@ int main() {
     Chapter7();
     return 0;
 }
+void simple(int n, ...){//可变参数
+    using namespace std;
+    va_list lst;//获取可变参数列表
+    _crt_va_start(lst, n);//告知可变参数起始位置：传入最后一个固定参数
+    double a = _crt_va_arg(lst, double);//第一个可变参数
+    double b = _crt_va_arg(lst, double);//第二个可变参数
+    _crt_va_end(lst);//结束对可变参数的使用
+    cout << a << " - " << b << endl;
+}
 
+int sumArray(int *array, int count){
+    int sum = 0;
+    for (int i = 0; i < count; i ++){
+        array[i] = i + 1;
+    }
+    return sum;
+}
+
+int sumArrayRange(const int *pHead, const int *pEnd){//从数组中取一定的范围进行操作，并且强制声明为cosnt
+    int sum = 0;
+    for (const int *p = pHead; p != pEnd; p ++){
+        sum += *p;
+    }
+    return sum;
+}
 void Chapter7(){
     using namespace std;
-    cout << "Hello,world" << endl;
+    simple(3, 5.6, 2.5);//传递可变参数
+    /*
+     * 若前面加上const关键字，则这个数组就是不可更改的,
+     * 且编译器有规定，禁止将const修饰的变量赋值给非const修饰的变量，也就是说如果下面代码的array前面加上const修饰，
+     * 则下面的sumArray函数调用将报错，因为sumArray的参数列表中的array前面没有加const修饰符
+     * */
+    int array[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+    cout << sumArray(array, 20) << endl;//传递数组指针
+    for (int a : array){
+        cout << a << " -> ";
+    }
+    cout << endl << sumArrayRange((array + 5), (array + 9)) << endl;
 }
+
 void Chapter6(){
     using namespace std;
     char val = 'a';
