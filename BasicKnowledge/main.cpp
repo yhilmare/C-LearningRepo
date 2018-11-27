@@ -56,7 +56,7 @@ int sumArrayRange(const int *pHead, const int *pEnd){//´ÓÊı×éÖĞÈ¡Ò»¶¨µÄ·¶Î§½øĞĞ²
     return sum;
 }
 
-int sumTwoDimMatrix(int (*p)[3], int row){
+int sumTwoDimMatrix(int p[][3], int row){
     int sum = 0;
     for (int i = 0; i < row; i ++){
         for (int j = 0; j < 3; j ++){
@@ -101,8 +101,13 @@ int recurs(int count){
 }
 
 double pam(int);
-void estimate(int line, double (*pf)(int));
-
+void estimate(int line, double (* )(int));
+double *func1(const double *, int);
+double *func2(const double *, int);
+double *func3(const double *, int);
+void testfuncarray(double *(*[3])(const double *, int));
+void testfuncarray2(double *(*((*)[3]))(const double *, int));
+void simple(int, ...);
 void Chapter7(){
     using namespace std;
     simple(3, 5.6, 2.5);//´«µİ¿É±ä²ÎÊı
@@ -141,7 +146,7 @@ void Chapter7(){
     int at[5] = {1,2,3,4,5};
     int (*atp)[5] = &at;
     int *atpp = at;
-    cout << (*atp)[0] << endl;
+    cout << (*atp)[0] << *(*atp + 2)<< endl;
     //ÔÚº¯ÊıÖĞÊ¹ÓÃstring
     string str = "I love my country";//stringÀàĞÍµÄ²Ù×÷²Î¿¼java
     show_string(&str);//´«µİÖ¸ÕëÊ±£¬ÆäÊµÒ²ÊÇ´«µİÁËÒ»¸öÖ¸ÕëµÄ¿½±´
@@ -165,6 +170,62 @@ void Chapter7(){
     //º¯ÊıÖ¸Õë
     estimate(10, pam);
 
+    double *(*pfunc[3])(const double*, int) = {func1, func2, func3};//º¯ÊıÖ¸ÕëÊı×é
+    testfuncarray(pfunc);
+    double *(*((*pf)[3]))(const double *, int) = &pfunc;
+    double pd[5] = {1.2, 2.5, 3.6, 2.4, 9.58};
+    delete [] (*(*pf + 2))(pd, 5);
+    delete [] (*pf)[2](pd, 5);
+    delete [] (*(pfunc + 2))(pd, 5);
+
+    typedef double *(*((*p_func)[3]))(const double*, int) ;
+
+    p_func pointer = &pfunc;
+
+    testfuncarray2(pf);
+
+}
+void testfuncarray2(double *(*((*p)[3]))(const double *, int)){
+    double pd[5] = {1.2, 2.5, 3.6, 2.4, 9.55};
+    for (int i = 0; i < 3; i ++){
+        delete [](*(*p + i))(pd, 5);
+        cout << "==============" << std::endl;
+    }
+
+}
+void testfuncarray(double *(*p[3])(const double *, int)){
+    double pd[5] = {1.2, 2.5, 3.6, 2.4, 9.55};
+    for (int i = 0; i < 3; i ++) {
+        delete[] (*(p + i))(pd, 5);
+        cout << "==============" << std::endl;
+    }
+}
+
+double *func2(const double *p, int count){
+    double *presult = new double[count];
+    for (int i = 0; i < count; i ++){
+        presult[i] = *(p + i);
+        cout << "This is func2: " << *(p + i) << std::endl;
+    }
+    return presult;
+}
+
+double *func3(const double *p, int count){
+    double *presult = new double[count];
+    for (int i = 0; i < count; i ++){
+        presult[i] = *(p + i);
+        cout << "This is func3: " << *(p + i) << std::endl;
+    }
+    return presult;
+}
+
+double *func1(const double *p, int count){
+    double *presult = new double[count];
+    for (int i = 0; i < count; i ++){
+        presult[i] = *(p + i);
+        cout << "This is func1: " << *(p + i) << std::endl;
+    }
+    return presult;
 }
 
 double pam(int n){
@@ -175,7 +236,7 @@ double pam(int n){
 }
 
 void estimate(int lines, double (*pf)(int)){
-    double result = (*pf)(lines);
+    double result = (*pf)(lines);//Á½ÖÖµ÷ÓÃ¶¼ÊÇ¿ÉÒÔµÄ£¬Ö»ÊÇÔİÊ±Ëµ²»ÇåÎªÊ²Ã´¶¼¿ÉÒÔ
     double res = pf(lines);
     cout << "The Result of estimation is " << result << " - " << res << std::endl;
     return;
