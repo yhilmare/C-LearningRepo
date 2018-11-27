@@ -178,7 +178,7 @@ void Chapter7(){
     delete [] (*pf)[2](pd, 5);
     delete [] (*(pfunc + 2))(pd, 5);
 
-    typedef double *(*((*p_func)[3]))(const double*, int) ;
+    typedef double *(*(*p_func)[3])(const double*, int) ;
 
     p_func pointer = &pfunc;
 
