@@ -18,6 +18,7 @@ void Chapter4();
 void Chapter5();
 void Chapter6();
 void Chapter7();
+void Chapter8();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -27,8 +28,19 @@ int main() {
 //    Chapter4();
 //    Chapter5();
 //    Chapter6();
-    Chapter7();
+//    Chapter7();
+    Chapter8();
     return 0;
+}
+inline double suqare(double);//也可以使用这种声明方法
+inline double square(double x){//使用inline关键字实现内联函数
+    return x * x;
+}
+void Chapter8(){
+    using namespace std;
+    cout << square(20) << endl;//内联函数可以加快程序的执行时间，但是会增加程序的内存开销
+
+
 }
 void simple(int n, ...){//可变参数
     using namespace std;
