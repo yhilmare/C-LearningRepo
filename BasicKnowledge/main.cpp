@@ -33,14 +33,84 @@ int main() {
     return 0;
 }
 inline double suqare(double);//也可以使用这种声明方法
-inline double square(double x){//使用inline关键字实现内联函数
+inline double square(const double x){//使用inline关键字实现内联函数
     return x * x;
 }
+double cube(const double &);
+void swap(int &, int &);
+double &modify(double &a);
 void Chapter8(){
     using namespace std;
     cout << square(20) << endl;//内联函数可以加快程序的执行时间，但是会增加程序的内存开销
 
+    int rat = 100;
+    int &rodent = rat;
+    rodent = 150;
+    cout << "The address of rat = " << &rat << ", The address of rodent = " << &rodent << endl;
 
+    //C++中的引用变量和原始变量仅仅是是名字不同而已，实际上他们是同一个变量，操作其中一个也会影响到另一个
+    int rats = 150;
+    int bunnies = 200;
+    int &rodents = rats;
+    cout << "rats address = " << &rats << ", rodents address = " << &rodents << endl;
+    rodents = bunnies;//由于rodents是rats的引用，因此执行这一句就相当于执行rats=bunnies
+    cout << "rats = " << rats << ", bunnies = " << bunnies << ", rodents = " << rodents << endl;
+    cout << "rats address = " << &rats << ", bunnies address = " << &bunnies << ", rodents address = " << &rodents << endl;
+    //引用变量一旦初始化，那么它就成为那个内存关联的所有变量的引用变量
+    int rat_1 = 10;
+    int  *p = &rat_1;
+    int &rodent_1 = *p;
+    int bunnies_1 = 25;
+    p = &bunnies_1;
+    cout << "rodent_1 = " << rodent_1 << endl;
+
+    /*
+     * 引用变量使用在函数参数传递的时候要更加小心，因为使用了引用变量声明的参数在函数中操作的实际上就是调用函数传入的那个变量，
+     * 也就是说函数内部对引用变量的修改会影响到调用函数中的变量。
+     * 在函数中使用引用变量作为参数有着两个主要限制：
+     * 1. 首先在调用函数时一定要传入变量而不能是表达式或常量，类似于func(x + 3)或func(3)。
+     * 2. 其次传入变量的类型要严格符合函数的声明的参数类型，无法进行隐式类型转换。
+     * 但是如果在函数的引用变量前使用了const关键字，那么就会发生很多改变：
+     * 1. 首先如果函数参数列表中使用了带有const修饰的引用变量，那么在函数中就不能对这个变量进行改变值的操作，例如赋值。
+     * 2. 这样的带有const修饰的引用变量可以进行类型的隐式转换，例如声明为const double &a，在实际调用时可以传入一个int型变量。
+     * 3. 这种带有const声明的引用变量还可以接收表达式传入。
+     * 4. 第二，第三点的实现实际上是函数在调用时创建了一个临时变量，由于带有const的变量不允许修改（正如第一点所表述的），因此使用这种临时变量也不会引起任何问题。
+     * */
+    int a = 20;
+    int b = 25;
+    //这样的调用是禁止的，因为给引用变量赋值的是一个表达式，而不是一个变量，且引用变量没有使用const关键字修饰
+    //swap(a + 20, b);
+    int x = 10;
+    cout << cube(x) << endl;//由于有const关键字修饰，因此支持常量，表达式赋值，且还支持隐式类型转换
+    cout << cube(x + 10) << endl;
+
+    //函数也可以返回一个变量的引用：
+    double param_double = 25.6;
+    /*
+     * 在这里返回的是param_double变量的引用，因此当然可以对其进行赋值操作。但是如果这里返回的是一个值，那么这种语法将是错误的
+     * 原因在于，如果返回的是值，那么这是一个常量，常量是不能够被赋值操作的（指针也是如此）。但是如果返回的是一个引用，那么这个引用就可以被重新赋值，
+     * 而且由于函数本身返回的是param_double的引用，因此对这个引用的更改自然就反映到了param_double本身身上。
+     * 如果想要禁止这种操作，需要在函数返回值前面加上const关键字，这样就无法更改了。
+     * 最后：返回引用需要注意不能返回函数中的临时变量的引用，因为这种变量的生命周期只是函数执行的生命周期，在一般的以值返回的函数中还没有问题（因为这种情况下返回值是被拷贝到某个寄存器的）
+     * 若是以引用返回，那么函数结束后，临时变量的内存被释放，这种引用就会失效。解决办法有两个：
+     * 1. 如果函数的参数列表中有引用参数，那么返回参数列表中的引用变量。
+     * 2. 如果一定要返回函数中的临时变量，那么一定要使用new关键字来动态申请内存。
+     * */
+    modify(param_double) = 56.9;//
+    cout << param_double << endl;
+
+}
+
+double &modify(double &a){
+    return a;
+}
+void swap(int &a, int &b){
+    int tmp = b;
+    b = a;
+    a = tmp;
+}
+double cube(const double &param){//使用了const关键字，意味着param是不可被修改的，这就杜绝了引用变量修改原值的可能
+    return param * param * param;
 }
 void simple(int n, ...){//可变参数
     using namespace std;
