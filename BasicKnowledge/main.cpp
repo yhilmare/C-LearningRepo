@@ -38,7 +38,49 @@ inline double square(const double x){//使用inline关键字实现内联函数
 }
 double cube(const double &);
 void swap(int &, int &);
-double &modify(double &a);
+double &modify(double &);
+
+void printTest(int count = 11, char s = '*'){
+    for (int i = 0; i < count;i ++){
+        int space_count = count - i - 1;
+        for (int j = 0; j < space_count; j ++){
+            cout << " ";
+        }
+        for (int j = 0; j <= 2 * i + 1; j ++){
+            if (j % 2 == 0){
+                cout << s;
+            }else {
+                cout << " ";
+            }
+        }
+        cout << std::endl;
+    }
+    for (int i = count - 2; i >= 0;i --){
+        int space_count = count - i - 1;
+        for (int j = 0; j < space_count; j ++){
+            cout << " ";
+        }
+        for (int j = 0; j <= 2 * i + 1; j ++){
+            if (j % 2 == 0){
+                cout << s;
+            }else {
+                cout << " ";
+            }
+        }
+        cout << std::endl;
+    }
+}
+void print(char *str, int count);
+void print(int count);
+
+template <typename T>//template <class T>这样的声明在C98中定义
+void Swap(T &a, T &b){
+    T tmp;
+    tmp = b;
+    b = a;
+    a = tmp;
+}
+
 void Chapter8(){
     using namespace std;
     cout << square(20) << endl;//内联函数可以加快程序的执行时间，但是会增加程序的内存开销
@@ -95,10 +137,34 @@ void Chapter8(){
      * 若是以引用返回，那么函数结束后，临时变量的内存被释放，这种引用就会失效。解决办法有两个：
      * 1. 如果函数的参数列表中有引用参数，那么返回参数列表中的引用变量。
      * 2. 如果一定要返回函数中的临时变量，那么一定要使用new关键字来动态申请内存。
+     * 将一个引用变量赋值给一个普通变量无疑是非常高效的，它将直接赋值，而不会产生中间结果。
      * */
     modify(param_double) = 56.9;//
     cout << param_double << endl;
 
+    //默认参数；函数的默认参数需要都集中在函数参数列表的右侧，不能出现默认参数和非默认参数混合排列的情况
+    printTest(3, '.');
+
+    //函数重载：关于函数重载只用知道一条：那就是编译器只使用特征标（即函数参数列表中参数的类型和排列顺序）来区分同名函数，跟函数的返回值没有关系
+    print("I love you", 5);
+    print(4);
+
+    int aa = 50;
+    int bb = 46;
+    Swap(aa, bb);
+    cout << aa << " " << bb;
+}
+
+void print(char *str, int count){
+    for (int i = 0; i < count; i ++){
+        cout << str << std::endl;
+    }
+}
+
+void print(int count){
+    for (int i = 0; i < count; i ++){
+        cout << "Hello,world" << std::endl;
+    }
 }
 
 double &modify(double &a){
