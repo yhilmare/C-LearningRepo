@@ -32,7 +32,7 @@ int main() {
     Chapter8();
     return 0;
 }
-inline double suqare(double);//也可以使用这种声明方法
+inline double square(double);//也可以使用这种声明方法
 inline double square(const double x){//使用inline关键字实现内联函数
     return x * x;
 }
@@ -74,12 +74,9 @@ void print(char *str, int count);
 void print(int count);
 
 template <typename T>//template <class T>这样的声明在C98中定义
-void Swap(T &a, T &b){
-    T tmp;
-    tmp = b;
-    b = a;
-    a = tmp;
-}
+void Swap(T &a, T &b);
+template <class T>//函数模板重载，函数模板重载和普通的重载一样，也需要函数特征标不同，
+void Swap(T *a, T *b, int n);
 
 void Chapter8(){
     using namespace std;
@@ -149,10 +146,38 @@ void Chapter8(){
     print("I love you", 5);
     print(4);
 
+    /*
+     * 1. 函数模板可以使用template <class T>这样的声明在C98中定义，也可以使用template <typename T>这样的声明
+     * 2. 函数模板重载，函数模板重载和普通的重载一样，也需要函数特征标不同
+     * */
     int aa = 50;
     int bb = 46;
-    Swap(aa, bb);
-    cout << aa << " " << bb;
+    Swap(aa, bb);//模板函数
+    cout << aa << " " << bb << endl;
+
+    int a_array[5] = {1,2,3,4,5};
+    int b_array[5] = {6,7,8,9,10};
+    Swap(a_array, b_array, 5);
+    for (int i = 0;i < 5; i ++){
+        cout << a_array[i] << " ";
+    }
+}
+
+template <typename T>//template <class T>这样的声明在C98中定义
+void Swap(T &a, T &b){
+    T tmp;
+    tmp = b;
+    b = a;
+    a = tmp;
+}
+template <class T>
+void Swap(T *a, T *b, int n){
+    T temp;
+    for (int i = 0; i < n; i ++){
+        temp = b[i];
+        b[i] = a[i];
+        a[i] = temp;
+    }
 }
 
 void print(char *str, int count){
