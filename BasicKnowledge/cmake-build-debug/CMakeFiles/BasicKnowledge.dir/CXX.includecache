@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+F:/CLion-workspace/BasicKnowledge/lib/coordin.h
+
 F:/CLion-workspace/BasicKnowledge/main.cpp
 iostream
 -
@@ -27,4 +29,6 @@ cctype
 -
 fstream
 -
+lib/coordin.h
+F:/CLion-workspace/BasicKnowledge/lib/coordin.h
 

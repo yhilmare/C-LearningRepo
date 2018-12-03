@@ -8,6 +8,7 @@
 #include <ctime>
 #include <cctype>
 #include <fstream>
+#import "lib/coordin.h"
 
 using std::cout;
 using std::cin;
@@ -19,6 +20,7 @@ void Chapter5();
 void Chapter6();
 void Chapter7();
 void Chapter8();
+void Chapter9();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -29,9 +31,19 @@ int main() {
 //    Chapter5();
 //    Chapter6();
 //    Chapter7();
-    Chapter8();
+//    Chapter8();
+    Chapter9();
     return 0;
 }
+
+void Chapter9(){
+    using namespace std;
+    rect rplace = {15.4, 20.5};
+    polar pplace = rect_to_polar(rplace);
+    show_polar(pplace);
+
+}
+
 inline double square(double);//也可以使用这种声明方法
 inline double square(const double x){//使用inline关键字实现内联函数
     return x * x;

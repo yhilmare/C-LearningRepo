@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/coordin.h">
+			<Option target="BasicKnowledge"/>
+		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/file1.cpp">
+			<Option target="BasicKnowledge"/>
+		</Unit>
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/main.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
