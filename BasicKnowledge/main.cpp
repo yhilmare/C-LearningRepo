@@ -77,6 +77,19 @@ template <typename T>//template <class T>这样的声明在C98中定义
 void Swap(T &a, T &b);
 template <class T>//函数模板重载，函数模板重载和普通的重载一样，也需要函数特征标不同，
 void Swap(T *a, T *b, int n);
+struct job{
+    std::string name;
+    double salary;
+    int floor;
+};
+template <> void Swap<job>(job &, job &);
+/*
+ * 以下是普通函数定义；普通模板函数定义；显式具体化定义三种形式。
+ * */
+void func(int a, int b);
+template <class T>
+void func(T a, T b);
+template <> void func<int>(int a, int b);
 
 void Chapter8(){
     using namespace std;
@@ -140,15 +153,28 @@ void Chapter8(){
     cout << param_double << endl;
 
     //默认参数；函数的默认参数需要都集中在函数参数列表的右侧，不能出现默认参数和非默认参数混合排列的情况
-    printTest(3, '.');
+    printTest(3);
 
     //函数重载：关于函数重载只用知道一条：那就是编译器只使用特征标（即函数参数列表中参数的类型和排列顺序）来区分同名函数，跟函数的返回值没有关系
     print("I love you", 5);
     print(4);
 
     /*
+     * 在使用函数模板时，声明的函数模板并不会生成一个函数实例，通常在调用时才会根据使用者定义的泛型类型去根据模板生成一个函数实例。显示具体化定义函数就是为了绕开函数模板，
+     * 声明该同名函数不属于模板函数。又由于显示具体化函数的调用优先级高于模板函数，因此在调用时会优先匹配显示具体化定义的函数。
+     * 通常，在使用时才根据使用者传入的泛型类型和函数模板来实例化函数的形式被称为“隐式实例化”。使用template void<typename>(paramA, paramB)这样的函数调用形式就是“显式实例化”
+     * 这种形式和显式具体化非常相似，但是不同的是缺少了显示具体化在template关键字后面的<>
+     * 重要的概念：
+     * 1. 显式具体化
+     * 2. 显示实例化
+     * 3. 隐式实例化
+     * 重要说明：
      * 1. 函数模板可以使用template <class T>这样的声明在C98中定义，也可以使用template <typename T>这样的声明
-     * 2. 函数模板重载，函数模板重载和普通的重载一样，也需要函数特征标不同
+     * 2. 函数模板重载，函数模板重载和普通的重载一样，也需要函数特征标不同。
+     * 3. 显式具体化定义函数（非函数模板）用于弥补模板函数处理能力不足的问题（例如可以处理结构体中的点运算符）。通常在使用中调用一个函数，若这个函数使用普通方式定义过，
+     *    利用普通模板方式定义过，利用显式具体化的方式定义过。那么在调用时通常遵循高优先级优先被调度：普通函数的调用优先级 > 显示具体化定义的函数优先级 > 普通模板函数的优先级
+     * 4. 再追加一点：在调用时当然可以直接使用函数名，让编译器来选择合适的函数版本，但是也可以显式地指定：func()这样的调用就是让编译器来选择函数版本，func<>()这样的调用
+     *    是明确指定在函数模板中选择（选择范围包括显示具体化的版本），func<typename>()是显示实例化一个函数模板
      * */
     int aa = 50;
     int bb = 46;
@@ -157,10 +183,46 @@ void Chapter8(){
 
     int a_array[5] = {1,2,3,4,5};
     int b_array[5] = {6,7,8,9,10};
-    Swap(a_array, b_array, 5);
+    Swap(a_array, b_array, 5);//函数模板重载
     for (int i = 0;i < 5; i ++){
         cout << a_array[i] << " ";
     }
+    cout << endl;
+
+
+    job j1 = {"David", 9500.43, 5};
+    job j2 = {"Smith", 5400.69, 1};
+    Swap(j1, j2);//显式具体化
+    cout << j1.name << " -> " << j1.salary << " -> " << j1.floor << endl;
+    cout << j2.name << " -> " << j2.salary << " -> " << j2.floor << endl;
+
+    func<>(12, 34);//显式指定使用函数模板，不使用普通函数定义
+    func<double>(12, 34);//显式实例化生成一个double型的函数
+
+}
+
+
+template <> void func<int>(int a, int b){
+    cout << "This is in template<> " << a << b << std::endl;
+}
+void func(int a, int b){
+    cout << "This is func " << a << b << std::endl;
+}
+template <class T>
+void func(T a, T b){
+    cout << "This is template<class T>" << a << b << std::endl;
+}
+
+
+template <> void Swap<job>(job &a, job &b){//通常都是这么写的
+    double t1;
+    t1 = b.salary;
+    b.salary = a.salary;
+    a.salary = t1;
+    int t2;
+    t2 = b.floor;
+    b.floor = a.floor;
+    a.floor = t2;
 }
 
 template <typename T>//template <class T>这样的声明在C98中定义
