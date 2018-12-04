@@ -4,31 +4,17 @@
 
 #ifndef BASICKNOWLEDGE_NAMESPACE_H
 #define BASICKNOWLEDGE_NAMESPACE_H
-#include <string>
 namespace Jill{
-    std::string name1 = "Jill";
+    using namespace std;
     void func();
 }
-namespace Jill{
-    void func(){
-        using namespace std;
-        cout << "This is in Jill::func" << endl;
-    }
-}
+
 namespace ilmare{
-    using Jill::name1;
-    using Jill::func;
-    std::string name = "ilmare";
-    std::string fetch(std::string name1){
-        using namespace std;
-        cout << "This is in ilmare::fetch " + name1 + " " + name << endl;
-    }
+    using namespace std;
+    void fetch(string name2);
     void func_1();
     namespace ilmare_c{
-        void func(){
-            using namespace std;
-            cout << "This is in ilmare::ilmare_c::func" << endl;
-        }
+        void func();
     }
 }
 #endif //BASICKNOWLEDGE_NAMESPACE_H

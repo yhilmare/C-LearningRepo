@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cmath>
 #include "coordin.h"
+#include "namespace.h"
+#include <string>
 
 int cat = 20;
 int dog = 256;
@@ -25,4 +27,24 @@ void show_polar(polar dapos){
 
 void Chapter9_func(){
     std::cout << "This is extern function" << std::endl;
+}
+
+namespace Jill{
+    using namespace std;
+    string name = "Smith";
+    void func(){
+        cout << "This is in Jill::func" << endl;
+    }
+}
+
+namespace ilmare{
+    using Jill::name;
+    void fetch(std::string name2){
+        cout << "This is in ilmare::fetch " + ilmare::name + " " + name2 << endl;
+    }
+    namespace ilmare_c{
+        void func(){
+            cout << "This is in ilmare::ilmare_c::func" << endl;
+        }
+    }
 }
