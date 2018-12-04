@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/BasicKnowledge.dir/main.cpp.obj"
-  "CMakeFiles/BasicKnowledge.dir/lib/file1.cpp.obj"
   "CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj"
   "BasicKnowledge.pdb"
   "BasicKnowledge.exe"

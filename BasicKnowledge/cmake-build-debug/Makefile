@@ -122,33 +122,6 @@ BasicKnowledge/fast:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/build
 .PHONY : BasicKnowledge/fast
 
-lib/file1.obj: lib/file1.cpp.obj
-
-.PHONY : lib/file1.obj
-
-# target to build an object file
-lib/file1.cpp.obj:
-	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/lib/file1.cpp.obj
-.PHONY : lib/file1.cpp.obj
-
-lib/file1.i: lib/file1.cpp.i
-
-.PHONY : lib/file1.i
-
-# target to preprocess a source file
-lib/file1.cpp.i:
-	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/lib/file1.cpp.i
-.PHONY : lib/file1.cpp.i
-
-lib/file1.s: lib/file1.cpp.s
-
-.PHONY : lib/file1.s
-
-# target to generate assembly for a file
-lib/file1.cpp.s:
-	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/lib/file1.cpp.s
-.PHONY : lib/file1.cpp.s
-
 lib/function.obj: lib/function.cpp.obj
 
 .PHONY : lib/function.obj
@@ -212,9 +185,6 @@ help:
 	@echo ... BasicKnowledge
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... lib/file1.obj
-	@echo ... lib/file1.i
-	@echo ... lib/file1.s
 	@echo ... lib/function.obj
 	@echo ... lib/function.i
 	@echo ... lib/function.s

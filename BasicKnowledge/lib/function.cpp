@@ -5,6 +5,8 @@
 #include <cmath>
 #include "coordin.h"
 
+int cat = 20;
+int dog = 256;
 polar rect_to_polar(rect xypos){
     using namespace std;
     polar answer;
@@ -19,4 +21,8 @@ void show_polar(polar dapos){
     cout << "distance = " << dapos.distance;
     cout << ", angle = " << dapos.angle * Rad_to_deg;
     cout << " degrees" << endl;
+}
+
+void Chapter9_func(){
+    std::cout << "This is extern function" << std::endl;
 }

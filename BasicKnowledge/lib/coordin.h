@@ -14,4 +14,5 @@ struct rect{
 };
 polar rect_to_polar(rect xypos);
 void show_polar(polar dapos);
+const int cats = 555;
 #endif //BASICKNOWLEDGE_COORDIN_H
