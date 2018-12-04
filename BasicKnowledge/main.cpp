@@ -9,6 +9,8 @@
 #include <cctype>
 #include <fstream>
 #include "lib/coordin.h"
+#include <new>
+#include "/lib/namespaces.h"
 
 using std::cout;
 using std::cin;
@@ -40,11 +42,17 @@ extern int cat;//使用外部变量（存在于function.cpp中）
  * 这个变量在function.cpp中也定义了，因此如果在这里还需要定义一个同名的内部变量，就必须加上static关键字，否则将会引发错误。
  * 引发错误的原因在于，如果不使用static关键字，那么dog将会声明为全局静态变量，但是在function.cpp中已经存在一个名为dog的全局
  * 静态变量，这就会引发冲突。所以必须使用static关键字，显式地指定dog为内部变量才可以。
+ * 指针也可以作为外部链接变量。
  * */
 static int dog = 114;
 static double mick = 25.45;
 void count();
 static void Chapter9_func();
+
+void ilmare::func_1() {
+    using namespace std;
+    cout << "This is in ilmare::func_1()" << endl;
+}
 void Chapter9(){
     using namespace std;
     rect rplace = {15.4, 20.5};
@@ -72,7 +80,7 @@ void Chapter9(){
      * 使用无链接性的静态变量：这种静态变量声明在函数中或者代码块里，这种变量的生命周期是整个程序运行期间，与函数的生命周期无关。虽然这种变量在函数或代码块的外部无法访问到。
      * 但是函数或代码块内部却是一直可见的，这样的变量可用于保存函数的状态，因为即使函数调用完毕这样的变量也不会被释放，下次函数调用时依然可以使用这个变量，其内部的状态并不会发生改变。
      * */
-    for (int i = 0; i < 10; i ++){
+    for (int i = 0; i < 3; i ++){
         count();
     }
     /*
@@ -89,9 +97,49 @@ void Chapter9(){
     cout << cats << endl;//在头文件中包含了const int cats = 555;
 
     //函数的内部外部链接性和变量是相同的，同样也可以使用extern和static关键字
-
     Chapter9_func();
+
+    //new运算符
+    /*
+     * 使用#include引入新的new和传统的new最大的区别在于，新的new可以指定内存分配的具体地址。
+     * 下面的例子中使用传统的new关键字会在程序的堆“heap”中开辟一片内存，具体放置在哪程序员无法感知，但是使用了新的new运算符（需要使用#include<new>）后就可以指定一片内存
+     * 在这个例子中制定了一个512字节的buffer。和传统的new关键字不同，新的new操作需要这样使用：new (buffer) double[10]。也就是需要显示指定内存的具体位置。
+     * 需要特别说明的是：使用新的new运算符创建内存不需要释放，而且创建的开始地址就是括号中的地址，也就是说如果循环创建且不在括号中加入地址偏移量的话，新申请的内存就会覆盖原有的。
+     * 需要这样操作才能够避免新申请的内存覆盖掉原有的new (buffer + size * sizeof(double)) double[size]，即增加一个地址偏移量。
+     * 之所以不需要释放的原因是申请内存的内存池buffer本来就存在于程序运行的堆中，而delete运算符只对heap中的内存有权限操作，因此无法delete。
+     * */
+    int size = 5;
+    char buffer[512];//定义一个512字节的缓冲，新的内存将在这里面开辟
+    cout << "buffer's address begin at " << (int *)buffer << endl;
+    double *pd = new (buffer) double[size];
+    double *pd_1 = new double[size];
+    for (int i = 0; i < size; i ++){
+        pd[i] = pd_1[i] = (i + 1) * 1000 + 1;
+    }
+    for (int i = 0; i < size; i ++){
+        cout << "\"" << pd[i] << "\"" << " is in " << &pd[i] << ", \"" << pd_1[i] << "\"" << " is in " << &pd_1[i] << std::endl;
+    }
+    delete [] pd_1;
+    cout << "============" << endl;
+    pd = new (buffer + size * sizeof(double)) double[size];
+    pd_1 = new double[size];
+    for (int i = 0; i < size; i ++){
+        pd[i] = pd_1[i] = (i + 1) * 1000 + 1;
+    }
+    for (int i = 0; i < size; i ++){
+        cout << "\"" << pd[i] << "\"" << " is in " << &pd[i] << ", \"" << pd_1[i] << "\"" << " is in " << &pd_1[i] << std::endl;
+    }
+    delete [] pd_1;//使用新new申请的内存不需要释放，也无法被释放，除非buffer也是使用new关键字申请的。
+
+    //名称空间
+    ilmare::name = "Smith";
+    ilmare::fetch("David");
+    cout << ilmare::name1 << endl;
+    ilmare::func();
+    ilmare::ilmare_c::func();
+    ilmare::func_1();
 }
+
 static void Chapter9_func(){
     cout << "This is static function" << std::endl;
 }
