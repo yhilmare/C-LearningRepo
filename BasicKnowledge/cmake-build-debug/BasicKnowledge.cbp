@@ -86,7 +86,7 @@
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/function.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/namespaces.h">
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/namespace.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/main.cpp">

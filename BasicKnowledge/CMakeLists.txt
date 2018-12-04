@@ -3,4 +3,4 @@ project(BasicKnowledge)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(BasicKnowledge main.cpp lib/coordin.h lib/function.cpp lib/namespaces.h)
+add_executable(BasicKnowledge main.cpp lib/coordin.h lib/function.cpp lib/namespace.h)

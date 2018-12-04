@@ -2,18 +2,16 @@
 // Created by Administrator on 2018/12/4.
 //
 
-#ifndef BASICKNOWLEDGE_NAMESPACES_H
-#define BASICKNOWLEDGE_NAMESPACES_H
-
+#ifndef BASICKNOWLEDGE_NAMESPACE_H
+#define BASICKNOWLEDGE_NAMESPACE_H
 #include <string>
 namespace Jill{
-    using namespace std;
-    string name1 = "Jill";
+    std::string name1 = "Jill";
     void func();
 }
 namespace Jill{
-    using namespace std;
     void func(){
+        using namespace std;
         cout << "This is in Jill::func" << endl;
     }
 }
@@ -22,13 +20,15 @@ namespace ilmare{
     using Jill::func;
     std::string name = "ilmare";
     std::string fetch(std::string name1){
-        std::cout << "This is in ilmare::fetch " + name1 + " " + name << endl;
+        using namespace std;
+        cout << "This is in ilmare::fetch " + name1 + " " + name << endl;
     }
     void func_1();
     namespace ilmare_c{
         void func(){
+            using namespace std;
             cout << "This is in ilmare::ilmare_c::func" << endl;
         }
     }
 }
-#endif //BASICKNOWLEDGE_NAMESPACES_H
+#endif //BASICKNOWLEDGE_NAMESPACE_H

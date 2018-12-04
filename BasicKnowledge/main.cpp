@@ -10,7 +10,7 @@
 #include <fstream>
 #include "lib/coordin.h"
 #include <new>
-#include "/lib/namespaces.h"
+#include "lib/namespace.h"
 
 using std::cout;
 using std::cin;

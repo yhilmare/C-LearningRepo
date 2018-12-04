@@ -8,13 +8,9 @@
 
 F:/CLion-workspace/BasicKnowledge/lib/coordin.h
 
-F:/CLion-workspace/BasicKnowledge/lib/function.cpp
-iostream
+F:/CLion-workspace/BasicKnowledge/lib/namespace.h
+string
 -
-cmath
--
-coordin.h
-F:/CLion-workspace/BasicKnowledge/lib/coordin.h
 
 F:/CLion-workspace/BasicKnowledge/main.cpp
 iostream
@@ -41,6 +37,6 @@ lib/coordin.h
 F:/CLion-workspace/BasicKnowledge/lib/coordin.h
 new
 -
-/lib/namespaces.h
--
+lib/namespace.h
+F:/CLion-workspace/BasicKnowledge/lib/namespace.h
 
