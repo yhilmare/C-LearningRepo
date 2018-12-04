@@ -5,6 +5,8 @@
 #ifndef BASICKNOWLEDGE_COORDIN_H
 #define BASICKNOWLEDGE_COORDIN_H
 
+#include <cmath>
+
 struct polar{
     double distance;
     double angle;

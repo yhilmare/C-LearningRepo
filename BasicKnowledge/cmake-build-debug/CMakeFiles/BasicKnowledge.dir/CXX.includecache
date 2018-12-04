@@ -7,17 +7,7 @@
 #IncludeRegexTransform: 
 
 F:/CLion-workspace/BasicKnowledge/lib/coordin.h
-
-F:/CLion-workspace/BasicKnowledge/lib/function.cpp
-iostream
--
 cmath
--
-coordin.h
-F:/CLion-workspace/BasicKnowledge/lib/coordin.h
-namespace.h
-F:/CLion-workspace/BasicKnowledge/lib/namespace.h
-string
 -
 
 F:/CLion-workspace/BasicKnowledge/lib/namespace.h

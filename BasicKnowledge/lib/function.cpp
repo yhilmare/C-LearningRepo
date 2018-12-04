@@ -24,11 +24,6 @@ void show_polar(polar dapos){
     cout << ", angle = " << dapos.angle * Rad_to_deg;
     cout << " degrees" << endl;
 }
-
-void Chapter9_func(){
-    std::cout << "This is extern function" << std::endl;
-}
-
 namespace Jill{
     using namespace std;
     string name = "Smith";
@@ -39,6 +34,9 @@ namespace Jill{
 
 namespace ilmare{
     using Jill::name;
+    void func_1(){
+        cout << "This is func_1" << endl;
+    }
     void fetch(std::string name2){
         cout << "This is in ilmare::fetch " + ilmare::name + " " + name2 << endl;
     }
@@ -48,3 +46,8 @@ namespace ilmare{
         }
     }
 }
+void Chapter9_func(){
+    std::cout << "This is extern function" << std::endl;
+    std::cout << ilmare::name << std::endl;
+}
+

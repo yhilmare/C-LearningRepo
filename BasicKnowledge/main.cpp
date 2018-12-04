@@ -48,10 +48,7 @@ static int dog = 114;
 static double mick = 25.45;
 void count();
 static void Chapter9_func();
-void ilmare::func_1() {
-    using namespace std;
-    cout << "This is ilmare::func_1" << endl;
-}
+
 void Chapter9(){
     using namespace std;
     rect rplace = {15.4, 20.5};
@@ -134,8 +131,7 @@ void Chapter9(){
     /*
      * 命名空间中可以包含命名空间，可以包含字段，函数的命名。这种命名空间可以定义在头文件中。但是如果定义在头文件中就不能包含字段的命名，因为头文件可能会被多个文件include
      * 这样的话就会执行多次命名空间定义，每一次命名空间定义都会定义一次字段，造成同一字段的多次定义，这会引发错误。因此在头文件中的命名空间最好只包含函数原型的声明，然后在
-     * 另一个文件中对命名空间中的函数进行实际的定义，
-     *
+     * 另一个文件中对命名空间中的函数进行实际的定义。
      * */
     ilmare::fetch("David");
     ilmare::func_1();
