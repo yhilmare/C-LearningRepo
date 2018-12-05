@@ -52,3 +52,11 @@ void Chapter9_func(){
     std::cout << ilmare::name << std::endl;
 }
 
+namespace ilmare{
+    Person::Person(const std::string &name, int age, gender gen) {
+        this->name = name;
+        this->age = age;
+        this->gen = gen;
+    }
+}
+
