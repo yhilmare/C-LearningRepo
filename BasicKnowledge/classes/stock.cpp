@@ -5,6 +5,9 @@
 #include "stock.h"
 #include <string>
 
+/*
+ * 非内联形式定义类方法
+ * */
 void Stock::acquire(const std::string &co, long n, double pr) {
     company = co;
     if (n < 0){
