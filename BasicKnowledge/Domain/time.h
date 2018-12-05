@@ -5,7 +5,6 @@
 #ifndef BASICKNOWLEDGE_TIME_H
 #define BASICKNOWLEDGE_TIME_H
 
-
 class Time {
 private:
     int hours;
@@ -16,9 +15,8 @@ public:
     void addHr(int h);
     void addMin(int m);
     void reset(int h = 0, int m = 0);
-    Time sum(const Time &t) const;
+    Time operator+(const Time &t) const;
+    Time operator-(double num) const;
     void show() const;
 };
-
-
 #endif //BASICKNOWLEDGE_TIME_H

@@ -12,25 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="352757cf-0e67-4091-b908-a45f54ba3b31" name="Default Changelist" comment="update at Nov 18th">
-      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/C++ Learning Report(Chapter9)-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/C++ Learning Report(Chapter9)-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BasicKnowledge.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BasicKnowledge.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/time.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/time.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/time.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/time.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BasicKnowledge.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BasicKnowledge.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++ Learning Report(Chapter9).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../C++ Learning Report(Chapter9).ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++ Learning Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../C++ Learning Report.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +34,7 @@
     <session id="1652418038">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="10" />
           <entry key="project.opened" value="15" />
@@ -52,15 +42,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="36420" />
-          <entry key="h" value="3932" />
+          <entry key="cpp" value="36829" />
+          <entry key="h" value="4000" />
           <entry key="py" value="18" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="40352" />
+          <entry key="ObjectiveC" value="40829" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Python" value="18" />
         </counts>
@@ -70,7 +60,7 @@
           <entry key="Makefile" value="2" />
           <entry key="cbp" value="1" />
           <entry key="cmake" value="1" />
-          <entry key="cpp" value="15" />
+          <entry key="cpp" value="16" />
           <entry key="groovy" value="1" />
           <entry key="h" value="17" />
           <entry key="http" value="1" />
@@ -83,7 +73,7 @@
           <entry key="CMakeCache.txt" value="1" />
           <entry key="CMakeLists.txt" value="2" />
           <entry key="HTTP Request" value="1" />
-          <entry key="ObjectiveC" value="32" />
+          <entry key="ObjectiveC" value="33" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="1" />
           <entry key="Scratch" value="1" />
@@ -99,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state relative-caret-position="424">
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#6533#6535#0" expanded="true" />
@@ -112,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Domain/time.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="709">
+              <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
                 <element signature="e#49#66#0" expanded="true" />
               </folding>
@@ -125,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/Domain/time.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -169,9 +159,9 @@
         <option value="$PROJECT_DIR$/lib/function.cpp" />
         <option value="$PROJECT_DIR$/lib/namespace.h" />
         <option value="$PROJECT_DIR$/classes/stock.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Domain/time.h" />
         <option value="$PROJECT_DIR$/Domain/time.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -181,7 +171,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="298" />
     <option name="y" value="163" />
     <option name="width" value="1400" />
@@ -314,15 +304,15 @@
       <workItem from="1543543259672" duration="14161000" />
       <workItem from="1543800453928" duration="18797000" />
       <workItem from="1543888899097" duration="25358000" />
-      <workItem from="1543973223959" duration="24146000" />
+      <workItem from="1543973223959" duration="25716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184931000" />
+    <option name="totallyTimeSpent" value="186501000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992928" visible="true" weight="0.108208954" />
@@ -330,7 +320,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.5007072" side_tool="true" weight="0.10714286" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32120582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32120582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -407,16 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/function.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding>
-            <element signature="e#48#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/coordin.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -447,17 +427,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/time.h">
+    <entry file="file://$PROJECT_DIR$/lib/function.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="784">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding>
+            <element signature="e#48#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="424">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <element signature="e#6533#6535#0" expanded="true" />
@@ -465,10 +448,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/time.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Domain/time.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="709">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding>
             <element signature="e#49#66#0" expanded="true" />
           </folding>
