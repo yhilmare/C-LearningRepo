@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+F:/CLion-workspace/BasicKnowledge/Domain/time.h
+
 F:/CLion-workspace/BasicKnowledge/classes/stock.h
 string
 -
@@ -53,4 +55,6 @@ lib/namespace.h
 F:/CLion-workspace/BasicKnowledge/lib/namespace.h
 classes/stock.h
 F:/CLion-workspace/BasicKnowledge/classes/stock.h
+Domain/time.h
+F:/CLion-workspace/BasicKnowledge/Domain/time.h
 

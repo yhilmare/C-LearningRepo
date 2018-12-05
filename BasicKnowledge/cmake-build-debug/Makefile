@@ -122,6 +122,33 @@ BasicKnowledge/fast:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/build
 .PHONY : BasicKnowledge/fast
 
+Domain/time.obj: Domain/time.cpp.obj
+
+.PHONY : Domain/time.obj
+
+# target to build an object file
+Domain/time.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj
+.PHONY : Domain/time.cpp.obj
+
+Domain/time.i: Domain/time.cpp.i
+
+.PHONY : Domain/time.i
+
+# target to preprocess a source file
+Domain/time.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.i
+.PHONY : Domain/time.cpp.i
+
+Domain/time.s: Domain/time.cpp.s
+
+.PHONY : Domain/time.s
+
+# target to generate assembly for a file
+Domain/time.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.s
+.PHONY : Domain/time.cpp.s
+
 classes/stock.obj: classes/stock.cpp.obj
 
 .PHONY : classes/stock.obj
@@ -212,6 +239,9 @@ help:
 	@echo ... BasicKnowledge
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Domain/time.obj
+	@echo ... Domain/time.i
+	@echo ... Domain/time.s
 	@echo ... classes/stock.obj
 	@echo ... classes/stock.i
 	@echo ... classes/stock.s

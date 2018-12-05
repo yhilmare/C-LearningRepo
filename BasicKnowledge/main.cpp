@@ -12,6 +12,7 @@
 #include <new>
 #include "lib/namespace.h"
 #include "classes/stock.h"
+#include "Domain/time.h"
 
 using std::cout;
 using std::cin;
@@ -25,6 +26,7 @@ void Chapter7();
 void Chapter8();
 void Chapter9();
 void Chapter10();
+void Chapter11();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -37,8 +39,17 @@ int main() {
 //    Chapter7();
 //    Chapter8();
 //    Chapter9();
-    Chapter10();
+//    Chapter10();
+    Chapter11();
     return 0;
+}
+
+void Chapter11(){
+    using namespace std;
+    Time t = Time(10, 15);
+    Time t1 = t.sum(Time(20, 45));
+    t.show();
+    t1.show();
 }
 
 void Chapter10(){
@@ -86,7 +97,6 @@ void Chapter10(){
         person.show();
         ilmare::p.show();
     }
-
 }
 
 extern int cat;//使用外部变量（存在于function.cpp中）

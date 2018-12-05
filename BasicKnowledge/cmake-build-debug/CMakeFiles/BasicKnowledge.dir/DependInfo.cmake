@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "F:/CLion-workspace/BasicKnowledge/Domain/time.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/classes/stock.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/lib/function.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/main.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj"
