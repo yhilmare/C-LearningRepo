@@ -122,6 +122,33 @@ BasicKnowledge/fast:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/build
 .PHONY : BasicKnowledge/fast
 
+classes/stock.obj: classes/stock.cpp.obj
+
+.PHONY : classes/stock.obj
+
+# target to build an object file
+classes/stock.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj
+.PHONY : classes/stock.cpp.obj
+
+classes/stock.i: classes/stock.cpp.i
+
+.PHONY : classes/stock.i
+
+# target to preprocess a source file
+classes/stock.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.i
+.PHONY : classes/stock.cpp.i
+
+classes/stock.s: classes/stock.cpp.s
+
+.PHONY : classes/stock.s
+
+# target to generate assembly for a file
+classes/stock.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.s
+.PHONY : classes/stock.cpp.s
+
 lib/function.obj: lib/function.cpp.obj
 
 .PHONY : lib/function.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... BasicKnowledge
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... classes/stock.obj
+	@echo ... classes/stock.i
+	@echo ... classes/stock.s
 	@echo ... lib/function.obj
 	@echo ... lib/function.i
 	@echo ... lib/function.s

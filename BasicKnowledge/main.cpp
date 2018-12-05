@@ -23,6 +23,7 @@ void Chapter6();
 void Chapter7();
 void Chapter8();
 void Chapter9();
+void Chapter10();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -34,8 +35,14 @@ int main() {
 //    Chapter6();
 //    Chapter7();
 //    Chapter8();
-    Chapter9();
+//    Chapter9();
+    Chapter10();
     return 0;
+}
+
+void Chapter10(){
+    using namespace std;
+    cout << "Hello,world" << endl;
 }
 extern int cat;//使用外部变量（存在于function.cpp中）
 /*
