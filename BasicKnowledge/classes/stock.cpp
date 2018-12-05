@@ -51,9 +51,29 @@ void Stock::update(double price) {
     share_val = price;
     set_tot();
 }
-void Stock::show() {
+void Stock::show() const {
     std::cout << "Company: " << company
          << " Shares: " << shares << std::endl
          << " Shares Price: $" << share_val
          << " Total Worth: $" << total_val << std::endl;
+}
+
+Stock::Stock(const std::string &co, long n) {
+    if (n < 0){
+        std::cout << "Number of shares can not be negative; "
+                  << company << " shares set to 0.\n";
+    }else{
+        shares = n;
+    };
+    share_val = 0.0;
+    set_tot();
+    p = new int[20];
+}
+
+const Stock& Stock::topval(const Stock &s1) const {
+    if (s1.total_val > this->total_val){
+        return s1;
+    }else{
+        return *this;
+    }
 }

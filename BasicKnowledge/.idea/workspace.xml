@@ -12,17 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="352757cf-0e67-4091-b908-a45f54ba3b31" name="Default Changelist" comment="update at Nov 18th">
-      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/C++ Learning Report(Chapter9)-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/C++ Learning Report(Chapter9)-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/stock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/stock.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/stock.h" beforeDir="false" afterPath="$PROJECT_DIR$/classes/stock.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/BasicKnowledge.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BasicKnowledge.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/namespace.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/namespace.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++ Learning Report(Chapter9).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../C++ Learning Report(Chapter9).ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,15 +42,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="34384" />
-          <entry key="h" value="1896" />
+          <entry key="cpp" value="35612" />
+          <entry key="h" value="3152" />
           <entry key="py" value="18" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="36280" />
+          <entry key="ObjectiveC" value="38764" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Python" value="18" />
         </counts>
@@ -88,11 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="780">
+              <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -103,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/stock.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+            <state relative-caret-position="72">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
               <folding>
                 <element signature="e#112#129#0" expanded="true" />
               </folding>
@@ -112,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/stock.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="1520">
+              <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
               <folding>
                 <element signature="e#48#67#0" expanded="true" />
               </folding>
@@ -161,9 +159,9 @@
         <option value="$PROJECT_DIR$/lib/coordin.h" />
         <option value="$PROJECT_DIR$/lib/function.cpp" />
         <option value="$PROJECT_DIR$/lib/namespace.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/classes/stock.h" />
         <option value="$PROJECT_DIR$/classes/stock.cpp" />
+        <option value="$PROJECT_DIR$/classes/stock.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -301,15 +299,15 @@
       <workItem from="1543543259672" duration="14161000" />
       <workItem from="1543800453928" duration="18797000" />
       <workItem from="1543888899097" duration="25358000" />
-      <workItem from="1543973223959" duration="8753000" />
+      <workItem from="1543973223959" duration="16508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169538000" />
+    <option name="totallyTimeSpent" value="177293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992928" visible="true" weight="0.108208954" />
@@ -317,13 +315,13 @@
       <window_info id="Favorites" order="2" sideWeight="0.5007072" side_tool="true" weight="0.10714286" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32120582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32120582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32952183" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32952183" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
@@ -411,32 +409,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/classes/stock.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="1520">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#48#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/stock.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        <state relative-caret-position="72">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding>
             <element signature="e#112#129#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/stock.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="780">
+          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
           <folding>
-            <element signature="e#48#67#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
