@@ -24,6 +24,7 @@ void show_polar(polar dapos){
     cout << ", angle = " << dapos.angle * Rad_to_deg;
     cout << " degrees" << endl;
 }
+
 namespace Jill{
     using namespace std;
     string name = "Smith";

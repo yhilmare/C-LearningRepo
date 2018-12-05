@@ -4,8 +4,11 @@
 
 #ifndef BASICKNOWLEDGE_NAMESPACE_H
 #define BASICKNOWLEDGE_NAMESPACE_H
+
+#include <string>
 namespace Jill{
     using namespace std;
+    static int age = 15;
     void func();
 }
 

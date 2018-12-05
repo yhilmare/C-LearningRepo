@@ -6,23 +6,21 @@
 
 #IncludeRegexTransform: 
 
-F:/CLion-workspace/BasicKnowledge/lib/coordin.h
-cmath
+F:/CLion-workspace/BasicKnowledge/classes/stock.h
+string
 -
-
-F:/CLion-workspace/BasicKnowledge/lib/function.cpp
 iostream
 -
+
+F:/CLion-workspace/BasicKnowledge/lib/coordin.h
 cmath
 -
-coordin.h
-F:/CLion-workspace/BasicKnowledge/lib/coordin.h
-namespace.h
+iostream
+-
+
 F:/CLion-workspace/BasicKnowledge/lib/namespace.h
 string
 -
-
-F:/CLion-workspace/BasicKnowledge/lib/namespace.h
 
 F:/CLion-workspace/BasicKnowledge/main.cpp
 iostream
@@ -51,4 +49,6 @@ new
 -
 lib/namespace.h
 F:/CLion-workspace/BasicKnowledge/lib/namespace.h
+classes/stock.h
+F:/CLion-workspace/BasicKnowledge/classes/stock.h
 

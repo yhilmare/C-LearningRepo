@@ -11,6 +11,7 @@
 #include "lib/coordin.h"
 #include <new>
 #include "lib/namespace.h"
+#include "classes/stock.h"
 
 using std::cout;
 using std::cin;
@@ -42,8 +43,26 @@ int main() {
 
 void Chapter10(){
     using namespace std;
-    cout << "Hello,world" << endl;
+
+    //头文件中也可以定义一个内联函数，内联函数要求在每个使用的程序文件中都定义一次，因此在头文件中直接定义内联函数是推荐的。
+    inline_function();
+
+    /*
+     * 类中一个方法如果直接在头文件中内联定义那么这个方法就是一个内敛方法而不用写出inline关键字。
+     * */
+    Stock t;
+    t.acquire("NanoSmart", 20, 12.50);
+    t.show();
+    t.buy(15, 18.125);
+    t.show();
+    t.sell(400, 20.00);
+    t.show();
+    t.buy(300000, 40.125);
+    t.show();
+    t.sell(300000, 0.125);
+    t.show();
 }
+
 extern int cat;//使用外部变量（存在于function.cpp中）
 /*
  * 这个变量在function.cpp中也定义了，因此如果在这里还需要定义一个同名的内部变量，就必须加上static关键字，否则将会引发错误。
