@@ -14,6 +14,7 @@
 #include "classes/stock.h"
 #include "Domain/time.h"
 #include "Domain/Date.h"
+#include <iomanip>
 
 using std::cout;
 using std::cin;
@@ -44,10 +45,7 @@ int main() {
     Chapter11();
     return 0;
 }
-Time operator-(double a, const Time &b){
-    return b - a;
-}
-
+Time operator-(double a, const Time &b);
 void Chapter11(){
     using namespace std;
     Time t = Time(10, 15);
@@ -92,11 +90,22 @@ void Chapter11(){
     Date d2 = Date(d1.get_million_seconds());
     d2.set_date_format(DATE::format_12_hours);
     cout << d2 << endl;
-    Date d3 = Date(1978, 12, 15, 12, 45, 15, DATE::format_12_hours);
+    Date d3 = Date(1978, 12, 15, 12, 45, 15, DATE::format_24_hours);
     cout << d3 << endl << "======================" << endl;
     cout << d3 + d1 << endl;
-}
 
+    /*
+     * C++中的强制类型转换，必须要在类成员中定义operator long/double/int/...() const;
+     * 若方法前面加上explicit则需要强制转换才行。
+     * */
+    long tmp = (long)d3;
+    Date d4 = 282487515;
+    cout << tmp << endl;
+    cout << d4 << endl;
+}
+Time operator-(double a, const Time &b){
+    return b - a;
+}
 void Chapter10(){
     using namespace std;
 

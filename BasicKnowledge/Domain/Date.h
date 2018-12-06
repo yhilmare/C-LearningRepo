@@ -34,6 +34,7 @@ namespace DATE{
         Date operator+(const Date &date);
         Date operator-(const Date &date);
         friend std::ostream &operator<<(std::ostream &os, const Date &date);
+        explicit operator long() const;//这是C++中的强制类型转换函数
     };
 }
 
