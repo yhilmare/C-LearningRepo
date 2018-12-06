@@ -122,6 +122,33 @@ BasicKnowledge/fast:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/build
 .PHONY : BasicKnowledge/fast
 
+Domain/Date.obj: Domain/Date.cpp.obj
+
+.PHONY : Domain/Date.obj
+
+# target to build an object file
+Domain/Date.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj
+.PHONY : Domain/Date.cpp.obj
+
+Domain/Date.i: Domain/Date.cpp.i
+
+.PHONY : Domain/Date.i
+
+# target to preprocess a source file
+Domain/Date.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.i
+.PHONY : Domain/Date.cpp.i
+
+Domain/Date.s: Domain/Date.cpp.s
+
+.PHONY : Domain/Date.s
+
+# target to generate assembly for a file
+Domain/Date.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.s
+.PHONY : Domain/Date.cpp.s
+
 Domain/time.obj: Domain/time.cpp.obj
 
 .PHONY : Domain/time.obj
@@ -239,6 +266,9 @@ help:
 	@echo ... BasicKnowledge
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Domain/Date.obj
+	@echo ... Domain/Date.i
+	@echo ... Domain/Date.s
 	@echo ... Domain/time.obj
 	@echo ... Domain/time.i
 	@echo ... Domain/time.s

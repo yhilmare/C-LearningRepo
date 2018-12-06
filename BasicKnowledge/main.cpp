@@ -13,6 +13,7 @@
 #include "lib/namespace.h"
 #include "classes/stock.h"
 #include "Domain/time.h"
+#include "Domain/Date.h"
 
 using std::cout;
 using std::cin;
@@ -43,6 +44,9 @@ int main() {
     Chapter11();
     return 0;
 }
+Time operator-(double a, const Time &b){
+    return b - a;
+}
 
 void Chapter11(){
     using namespace std;
@@ -50,15 +54,47 @@ void Chapter11(){
     /*
      * 这就是C++中的运算符重载。很简单：就是在其中定义一个operator op()函数重载就可以。
      * 运算符重载也有很多限制：
-     * 1. 重载的运算符的操作数中必须至少有一个是用户自定义的类型（当运算符重载作为成员方法时无需担心这个限制，天然满足，但是在友元函数中就要注意这一限制）
+     * 1. 重载的运算符的操作数中必须至少有一个是用户自定义的类型（当运算符重载作为成员方法时无需担心这个限制，天然满足，但是在使用函数重载运算符时就要注意这一限制）
+     *    类似于这样的重载是不被接受的double operator*(double a, double b);
      * 2. 运算符重载不能违反运算符原有的规则，例如减法需要有两个操作数，不能重载成只有一个操作数。
      * */
     Time t1 = t + Time(20, 45) + Time(25, 6);
     t.show();
     t1.show();
-
-    Time t2 = t - 15.6;
+    /*
+     * 下面的调用本质上是：t.operator-(15.6)，如果把式子写成15.6-t那么就会无法运算，因为这样的调用等效为：(15.6).operator-(t)但是double并没有重载减法运算符到Time类型
+     * 这时候就要使用函数来重载减法运算：Time operator-(double a, const Time &b)，但是这种形式的运算符重载没有解决访问类私有变量的问题，要解决这个问题就要用到友元函数：
+     * 1. 友元函数不是类成员，但是可以访问类的私有变量。
+     * 2. 友元函数要定义在类中，且函数原型前面要加上friend关键字。在具体实现时注意不要使用::域作用运算符，因为友元函数不是类的成员函数，且实现的时候不要使用friend关键字。
+     * 3. 友元函数可以使用默认内联形式实现，也可以使用显式内联形式实现，也可以使用非内联的形式实现，在实现方面和普通的成员函数相同。
+     * */
+    //
+    Time t2 = t - 15.66;
     t2.show();
+    t2 = 15.6 * t;
+    t2.show();
+
+    //友元
+    t2 = 15.6 - t;
+    t2.show();
+    /*
+     * 这个重载了<<运算符，虽然重载了<<运算符，但是有一个很明显的问题：类似于cout << t2这样的调用既可以解释成调用cout.operator<<(t2)
+     * 也可以解释成调用了Time中的友元函数或者调用了单纯的运算符重载函数（当然这二者不能同时存在，否则会引发冲突）。之所以会选择后者完全是因为后者的特征标更符合调用：可以想见，cout中
+     * <<运算符的右边参数由于要考虑到通用性肯定是一个类似于java中object的对象，但是在友元函数或者普通的<<运算符重载中这个右边参数一定会被精确指定为Time，这样在调用时就会优先匹配
+     * 参数匹配度高的。
+     * */
+    cout << t2 << t1 << "Hello, world" << endl;
+    //一个例子
+    cout << "======================================" << endl;
+    using DATE::Date;
+    Date d1 = Date();
+    cout << d1 << endl;
+    Date d2 = Date(d1.get_million_seconds());
+    d2.set_date_format(DATE::format_12_hours);
+    cout << d2 << endl;
+    Date d3 = Date(1978, 12, 15, 12, 45, 15, DATE::format_12_hours);
+    cout << d3 << endl << "======================" << endl;
+    cout << d3 + d1 << endl;
 }
 
 void Chapter10(){
@@ -389,8 +425,8 @@ void Chapter8(){
 
 }
 
-
-template <> void func<int>(int a, int b){
+template <>
+void func<int>(int a, int b){
     cout << "This is in template<> " << a << b << std::endl;
 }
 void func(int a, int b){

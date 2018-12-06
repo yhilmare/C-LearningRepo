@@ -21,4 +21,5 @@ const int cats = 555;
 inline void inline_function(){
     std::cout << "This is an inline function" << std::endl;
 }
+
 #endif //BASICKNOWLEDGE_COORDIN_H

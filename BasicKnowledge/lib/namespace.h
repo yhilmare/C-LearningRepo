@@ -51,4 +51,5 @@ inline void ilmare::Person::show() const{
          << "'s age is " << this->age
          << ", his/her gender is " << this->gen << endl;
 }
+
 #endif //BASICKNOWLEDGE_NAMESPACE_H
