@@ -44,7 +44,7 @@ namespace ilmare{
     }
 }
 inline ilmare::Person::~Person(){
-    cout << "The person " << this->name << " has been destoried!!" << endl;
+//    cout << "The person " << this->name << " has been destoried!!" << endl;
 }
 inline void ilmare::Person::show() const{
     cout << "The person " << this->name

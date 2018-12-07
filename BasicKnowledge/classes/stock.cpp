@@ -59,6 +59,7 @@ void Stock::show() const {
 }
 
 Stock::Stock(const std::string &co, long n) {
+    std::cout << "Stock(const std::string &co, long n), company is " << company << std::endl;
     if (n < 0){
         std::cout << "Number of shares can not be negative; "
                   << company << " shares set to 0.\n";
@@ -67,7 +68,8 @@ Stock::Stock(const std::string &co, long n) {
     };
     share_val = 0.0;
     set_tot();
-    p = new int[20];
+    p = new char[20];
+    strcpy(p, "I am a Chinese");
 }
 
 const Stock& Stock::topval(const Stock &s1) const {

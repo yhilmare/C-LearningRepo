@@ -4,7 +4,7 @@
 
 #include "Date.h"
 #include <ctime>
-#import <iostream>
+#include <iostream>
 #include <iomanip>
 
 namespace DATE {
@@ -128,24 +128,24 @@ namespace DATE {
         return res;
     }
 
-    std::ostream &operator<<(std::ostream &os, const Date &date) {
-        if (date.format == format_24_hours) {
-            os << std::setfill('0') << date.year << "-"
-               << std::setw(2) << date.month << "-"
-               << std::setw(2) << date.day << " "
-               << std::setw(2) << date.hours << ":"
-               << std::setw(2) << date.minutes << ":"
-               << std::setw(2) << date.seconds;
-        } else {
-            os << std::setfill('0') << date.year << "-"
-               << std::setw(2) << date.month << "-"
-               << std::setw(2) << date.day << " "
-               << std::setw(2) << ((date.hours > 12) ? (date.hours - 12) : date.hours) << ":"
-               << std::setw(2) << date.minutes << ":"
-               << std::setw(2) << date.seconds << ((date.hours >= 12) ? "pm" : "am");
-        }
-        return os;
-    }
+//    std::ostream &operator<<(std::ostream &os, const Date &date) {
+//        if (date.format == format_24_hours) {
+//            os << std::setfill('0') << date.year << "-"
+//               << std::setw(2) << date.month << "-"
+//               << std::setw(2) << date.day << " "
+//               << std::setw(2) << date.hours << ":"
+//               << std::setw(2) << date.minutes << ":"
+//               << std::setw(2) << date.seconds;
+//        } else {
+//            os << std::setfill('0') << date.year << "-"
+//               << std::setw(2) << date.month << "-"
+//               << std::setw(2) << date.day << " "
+//               << std::setw(2) << ((date.hours > 12) ? (date.hours - 12) : date.hours) << ":"
+//               << std::setw(2) << date.minutes << ":"
+//               << std::setw(2) << date.seconds << ((date.hours >= 12) ? "pm" : "am");
+//        }
+//        return os;
+//    }
 
     Date::operator long() const {
         return long(this->million_seconds);

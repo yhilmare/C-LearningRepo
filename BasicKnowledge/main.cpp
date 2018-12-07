@@ -29,6 +29,7 @@ void Chapter8();
 void Chapter9();
 void Chapter10();
 void Chapter11();
+void Chapter12();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -42,8 +43,46 @@ int main() {
 //    Chapter8();
 //    Chapter9();
 //    Chapter10();
-    Chapter11();
+//    Chapter11();
+    Chapter12();
     return 0;
+}
+
+void Chapter12(){
+    using namespace std;
+
+    {
+        /*
+         * 这一节讲了拷贝构造函数，拷贝构造函数就是在对象被拷贝的时候调用的，那么一个对象通常在以下几种情况下会被拷贝（使用Stock举例）：
+         * 1. 当对象以值传递作为函数的参数时（这时传入函数参数是其实传入的是一个对象的临时拷贝）。
+         * 2. 当函数以值返回时（此时，对象将把自己的值复制到一个寄存器中返回，也是对象拷贝）。
+         * 3. 使用赋值运算符时（这个在C++中有些特殊，因为其他的语言中赋值运算符往往都是指针指向就行了，但是C++中明确是对象拷贝），举例来说有这样一个赋值运算：
+         *    Stock obj1 = Stock();Stock obj2;obj2 = obj1;这样就触发拷贝操作，需要注意的是：此时并不是将obj2的指针指向了obj1的内存，而是将obj1的内容完整的
+         *    拷贝到了obj2中，虽然obj1和obj2的内容相同，但是二者的地址完全不同。对着赋值操作：有的编译器会将obj1的值复制给obj2，有的会复制obj1的值到一个临时对象，
+         *    然后在调用赋值运算符“=”（通常是这个运算符的重载函数）将临时对象的值赋给obj2。不管哪一种实现，都要进行对象的拷贝。
+         *
+         * 只要一个类中有new运算申请内存就需要自定义拷贝构造函数和重载赋值“=”运算符：
+         * 1. 
+         * */
+        Stock t = Stock("Microsoft");//使用构造函数
+        t.show();
+        cout << "======================" << endl;
+        Stock *p = new Stock();
+        p->show();
+        delete p;
+        cout << "======================" << endl;
+        Stock t1 = {"FaceBook"};
+        t1.show();
+        cout << "======================" << endl;
+        Stock t2;
+        cout << "The address of t2 is " << (int *)&t2    << endl;
+        t2 = t1;
+        cout << "The address of t2 is " << (int *)&t2 << ", the address of t1 is " << (int *)&t1 << endl;
+        using DATE::Date;
+        Date d = Date();
+        cout << d << endl;
+    }
+
 }
 Time operator-(double a, const Time &b);
 void Chapter11(){

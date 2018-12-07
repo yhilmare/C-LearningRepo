@@ -6,8 +6,20 @@
 
 #IncludeRegexTransform: 
 
+F:/CLion-workspace/BasicKnowledge/Domain/Date.cpp
+Date.h
+F:/CLion-workspace/BasicKnowledge/Domain/Date.h
+ctime
+-
+iostream
+-
+iomanip
+-
+
 F:/CLion-workspace/BasicKnowledge/Domain/Date.h
 iostream
+-
+iomanip
 -
 
 F:/CLion-workspace/BasicKnowledge/Domain/time.h
@@ -18,6 +30,8 @@ F:/CLion-workspace/BasicKnowledge/classes/stock.h
 string
 -
 iostream
+-
+cstring
 -
 
 F:/CLion-workspace/BasicKnowledge/lib/coordin.h
