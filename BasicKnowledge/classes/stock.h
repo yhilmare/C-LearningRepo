@@ -12,6 +12,7 @@
 class Stock{
 private:
     static const int ArraySize = 15;//使用静态const变量
+    static int tmp_val;
     enum egg{five=12};
     double array[five];
     char *p = NULL;
@@ -25,7 +26,8 @@ private:
     void pri_func();//当然也可以将这种内联方法显式定义出来
 public:
     Stock(const std::string &co, long n, double pr){//这个构造函数使用隐式内联形式定义
-        std::cout << "Stock(const std::string &co, long n, double pr), company is " << co << std::endl;
+        tmp_val += 1;
+        std::cout << "Stock(const std::string &co, long n, double pr), company is " << co << ", tmp_val is " << tmp_val << std::endl;
         if (n < 0){
             std::cout << "Number of shares can not be negative; "
                       << company << " shares set to 0.\n";
@@ -40,12 +42,14 @@ public:
     Stock(const std::string &co);//这个函数使用显式内联形式定义
     Stock(const std::string &co, long n);//这个构造函数使用非内联形式定义
     Stock(){
-        std::cout << "default Stock()" << std::endl;
+        Stock::tmp_val += 1;
+        std::cout << "default Stock()" << ", tmp_val is " << tmp_val << std::endl;
         p = new char[20];
         strcpy(p, "I am a Chinese");
     }//如果类中定义了其他的构造函数，那么就必须显示定义一个默认构造函数
     ~Stock();//析构函数，这种函数必须声明为public且只能被定义一次，不可重载
     Stock(const Stock &t){
+        tmp_val += 1;
         p = new char[20];
         strcpy(p, t.p);
         company = t.company;
@@ -86,15 +90,17 @@ inline void Stock::pri_func() {//显式定义内联方法，内联方法的定�
     cout << "This is inline function" << endl;
 }
 inline Stock::~Stock() {
+    tmp_val -= 1;
     using std::cout;
     if (p){
         cout << "Delete *p, p is \"" << p << "\" , address is " << (int *)p;
         delete [] p;
     }
-    cout << ", Bye " << company << std::endl;
+    cout << ", Bye " << company << ", tmp_val is " << tmp_val << std::endl;
 }
 inline Stock::Stock(const std::string &company) {
-    std::cout << "Stock(const std::string &company), company is " << company << std::endl;
+    tmp_val += 1;
+    std::cout << "Stock(const std::string &company), company is " << company << ", tmp_val is " << tmp_val << std::endl;
     this->company = company;
     shares = 0;
     share_val = 0.0;

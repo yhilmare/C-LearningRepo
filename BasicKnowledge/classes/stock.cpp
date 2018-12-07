@@ -8,6 +8,7 @@
 /*
  * 非内联形式定义类方法
  * */
+int Stock::tmp_val = 0;
 void Stock::acquire(const std::string &co, long n, double pr) {
     company = co;
     if (n < 0){
@@ -59,7 +60,8 @@ void Stock::show() const {
 }
 
 Stock::Stock(const std::string &co, long n) {
-    std::cout << "Stock(const std::string &co, long n), company is " << company << std::endl;
+    tmp_val += 1;
+    std::cout << "Stock(const std::string &co, long n), company is " << company << ", tmp_val is " << tmp_val <<std::endl;
     if (n < 0){
         std::cout << "Number of shares can not be negative; "
                   << company << " shares set to 0.\n";

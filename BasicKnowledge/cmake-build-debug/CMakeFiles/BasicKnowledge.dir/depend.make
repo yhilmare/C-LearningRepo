@@ -4,6 +4,9 @@
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj: ../Domain/Date.cpp
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj: ../Domain/Date.h
 
+CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj: ../Domain/String.cpp
+CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj: ../Domain/String.h
+
 CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj: ../Domain/time.cpp
 CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj: ../Domain/time.h
 
