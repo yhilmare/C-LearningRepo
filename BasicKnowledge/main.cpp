@@ -71,20 +71,18 @@ void Chapter12(){
          * */
         Stock t = Stock("Microsoft");//使用构造函数
         t.show();
-        cout << "======================" << endl;
+        cout << "=====================================" << endl;
         Stock *p = new Stock();
         p->show();
         delete p;
-        cout << "======================" << endl;
+        cout << "=====================================" << endl;
         Stock t1 = {"FaceBook"};
         t1.show();
-        cout << "======================" << endl;
+        cout << "=====================================" << endl;
         Stock t2;
         cout << "The address of t2 is " << (int *)&t2    << endl;
         t2 = t1;
         cout << "The address of t2 is " << (int *)&t2 << ", the address of t1 is " << (int *)&t1 << endl;
-
-
     }
 
 }
@@ -288,11 +286,11 @@ void Chapter9(){
 
     //名称空间
     /*
-     * 命名空间中可以包含命名空间，可以包含字段，函数的命名。这种命名空间可以定义在头文件中。但是如果定义在头文件中就不能包含字段的命名，因为头文件可能会被多个文件include
+     * 命名空间中可以包含命
+    ilmare::fetch("David");名空间，可以包含字段，函数的命名。这种命名空间可以定义在头文件中。但是如果定义在头文件中就不能包含字段的命名，因为头文件可能会被多个文件include
      * 这样的话就会执行多次命名空间定义，每一次命名空间定义都会定义一次字段，造成同一字段的多次定义，这会引发错误。因此在头文件中的命名空间最好只包含函数原型的声明，然后在
      * 另一个文件中对命名空间中的函数进行实际的定义。
      * */
-    ilmare::fetch("David");
     ilmare::func_1();
     Jill::func();
     ilmare::ilmare_c::func();
