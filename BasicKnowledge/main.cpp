@@ -78,14 +78,15 @@ void Chapter12(){
         cout << "=====================================" << endl;
         Stock t1 = {"FaceBook"};
         t1.show();
-        cout << "=====================================" << endl;
+        cout << "============================="
+                "========" << endl;
         Stock t2;
         cout << "The address of t2 is " << (int *)&t2    << endl;
         t2 = t1;
         cout << "The address of t2 is " << (int *)&t2 << ", the address of t1 is " << (int *)&t1 << endl;
     }
-
 }
+
 Time operator-(double a, const Time &b);
 void Chapter11(){
     using namespace std;

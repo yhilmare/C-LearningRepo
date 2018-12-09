@@ -16,6 +16,14 @@ F:/CLion-workspace/BasicKnowledge/Domain/time.h
 iostream
 -
 
+F:/CLion-workspace/BasicKnowledge/classes/stock.cpp
+iostream
+-
+stock.h
+F:/CLion-workspace/BasicKnowledge/classes/stock.h
+string
+-
+
 F:/CLion-workspace/BasicKnowledge/classes/stock.h
 string
 -
