@@ -88,10 +88,41 @@ void Chapter12(){
     }
 
     /*
-     * 静态的成员方法需要加上static关键字，但是在实现的时候不能使用static
-     * 在使用定位new运算符申请对象内存时注意在结尾不能使用delete来释放内存，如果对象内部也有new申请内存的情况则需要显示调用对象的析构函数。
+     * 1. 静态的成员方法需要加上static关键字，但是在实现的时候不能使用static
+     * 2. 在使用定位new运算符申请对象内存时注意在结尾不能使用delete来释放内存，如果对象内部也有new申请内存的情况则需要显示调用对象的析构函数。
+     * 3. 如果成员变量中含有const或者引用类型，那么就需要初始化他们，由于这些类型的变量不能够赋值而只能初始化，所以必须在类实例化前初始化他们，要么在
+     *    声明的时候就初始化，要么就在函数的构造方法上使用特殊语法来初始化。需要注意的是：const类型的变量可以用常量来初始化，但是引用类型则不行
      * */
-    
+    cout << "================================" << endl;
+    {
+        /*
+         * String这个自定义类型主要是为了验证拷贝构造函数以及对=运算符的重载：
+         * 1. 拷贝构造函数接收const类型的引用参数，主要提供深拷贝功能。
+         * 2. 对“=”运算符的重载必须要使用类成员函数进行，而且有三点要注意。
+         * */
+        String str = String("Hello,world");
+        cout << "str is \""<< str << "\", length is " << str.get_length() << endl;
+        String str1;
+        str1 = str;
+        cout << "str1 is \"" << str1 << "\", length is " << str1.get_length() << ", num_strings is " << String::how_many() << endl;
+
+        String str3 = str1 + " " + str;
+        cout << "str3 is \"" << str3 << "\", length is " << str3.get_length() << ", num_strings is " << String::how_many() << endl;
+        cout << "str3[5] is '" << str3[5] << "'" << endl;
+        str3[5] = 'o';
+        cout << "str3 is \"" << str3 << "\", length is " << str3.get_length() << ", num_strings is " << String::how_many() << endl;
+
+        String s1 = "a";
+        String s2 = "b";
+        cout << "s1 > s2's result is " << (s1 > s2 ? "true" : "false") << endl;
+        cout << "s1 < s2's result is " << (s1 < s2 ? "true" : "false") << endl;
+        cout << "s1 == s2's result is " << (s1 == s2 ? "true" : "false") << endl;
+
+        String s3;
+        cin >> s3;
+        cout << s3 << endl;
+    }
+    cout << "num_strings is " << String::how_many() << endl;
 }
 
 Time operator-(double a, const Time &b);

@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj"
   "CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj"
   "CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj"
+  "CMakeFiles/BasicKnowledge.dir/Domain/Stack.cpp.obj"
   "BasicKnowledge.pdb"
   "BasicKnowledge.exe"
   "BasicKnowledge.exe.manifest"
