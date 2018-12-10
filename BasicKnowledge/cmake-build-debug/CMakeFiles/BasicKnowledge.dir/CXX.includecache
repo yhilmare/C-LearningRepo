@@ -12,16 +12,12 @@ iostream
 iomanip
 -
 
+F:/CLion-workspace/BasicKnowledge/Domain/String.h
+../classes/stock.h
+F:/CLion-workspace/BasicKnowledge/classes/stock.h
+
 F:/CLion-workspace/BasicKnowledge/Domain/time.h
 iostream
--
-
-F:/CLion-workspace/BasicKnowledge/classes/stock.cpp
-iostream
--
-stock.h
-F:/CLion-workspace/BasicKnowledge/classes/stock.h
-string
 -
 
 F:/CLion-workspace/BasicKnowledge/classes/stock.h
@@ -79,4 +75,6 @@ Domain/Date.h
 F:/CLion-workspace/BasicKnowledge/Domain/Date.h
 iomanip
 -
+Domain/String.h
+F:/CLion-workspace/BasicKnowledge/Domain/String.h
 

@@ -7,6 +7,7 @@ CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj
 CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/String.cpp
  F:/CLion-workspace/BasicKnowledge/Domain/String.h
+ F:/CLion-workspace/BasicKnowledge/classes/stock.h
 CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/time.cpp
  F:/CLion-workspace/BasicKnowledge/Domain/time.h
@@ -19,6 +20,7 @@ CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj
  F:/CLion-workspace/BasicKnowledge/lib/namespace.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/Date.h
+ F:/CLion-workspace/BasicKnowledge/Domain/String.h
  F:/CLion-workspace/BasicKnowledge/Domain/time.h
  F:/CLion-workspace/BasicKnowledge/classes/stock.h
  F:/CLion-workspace/BasicKnowledge/lib/coordin.h

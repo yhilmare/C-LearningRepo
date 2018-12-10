@@ -15,6 +15,7 @@
 #include "Domain/time.h"
 #include "Domain/Date.h"
 #include <iomanip>
+#include "Domain/String.h"
 
 using std::cout;
 using std::cin;
@@ -85,6 +86,12 @@ void Chapter12(){
         t2 = t1;
         cout << "The address of t2 is " << (int *)&t2 << ", the address of t1 is " << (int *)&t1 << endl;
     }
+
+    /*
+     * 静态的成员方法需要加上static关键字，但是在实现的时候不能使用static
+     * 在使用定位new运算符申请对象内存时注意在结尾不能使用delete来释放内存，如果对象内部也有new申请内存的情况则需要显示调用对象的析构函数。
+     * */
+    
 }
 
 Time operator-(double a, const Time &b);
