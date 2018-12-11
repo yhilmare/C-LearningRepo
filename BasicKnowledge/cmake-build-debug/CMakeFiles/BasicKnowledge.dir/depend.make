@@ -4,6 +4,10 @@
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj: ../Domain/Date.cpp
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj: ../Domain/Date.h
 
+CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.obj: ../Domain/Manager.cpp
+CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.obj: ../Domain/Manager.h
+CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.obj: ../Domain/Person.h
+
 CMakeFiles/BasicKnowledge.dir/Domain/Person.cpp.obj: ../Domain/Person.cpp
 CMakeFiles/BasicKnowledge.dir/Domain/Person.cpp.obj: ../Domain/Person.h
 
@@ -24,6 +28,7 @@ CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj: ../lib/function.cpp
 CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj: ../lib/namespace.h
 
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/Date.h
+CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/Manager.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/Person.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/Stack.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/String.h

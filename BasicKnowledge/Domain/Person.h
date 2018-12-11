@@ -13,14 +13,22 @@ enum p_gender{
 };
 class Person {
 private:
-    string name;
     p_gender gen;
     int age;
 public:
+    string name;
+    Person(){
+        name = string("unkonwn");
+        gen = males;
+        age = 0;
+    }
     Person(const string &name, p_gender gen, int age);
     void get_name() const;
+    virtual void func();
 
     friend ostream &operator<<(ostream &os, const Person &p);
+
+    static void show();
 };
 
 

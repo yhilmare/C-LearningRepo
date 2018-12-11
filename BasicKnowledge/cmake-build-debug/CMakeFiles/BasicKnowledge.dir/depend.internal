@@ -4,6 +4,10 @@
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/Date.cpp
  F:/CLion-workspace/BasicKnowledge/Domain/Date.h
+CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.obj
+ F:/CLion-workspace/BasicKnowledge/Domain/Manager.cpp
+ F:/CLion-workspace/BasicKnowledge/Domain/Manager.h
+ F:/CLion-workspace/BasicKnowledge/Domain/Person.h
 CMakeFiles/BasicKnowledge.dir/Domain/Person.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/Person.cpp
  F:/CLion-workspace/BasicKnowledge/Domain/Person.h
@@ -25,6 +29,7 @@ CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj
  F:/CLion-workspace/BasicKnowledge/lib/namespace.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/Date.h
+ F:/CLion-workspace/BasicKnowledge/Domain/Manager.h
  F:/CLion-workspace/BasicKnowledge/Domain/Person.h
  F:/CLion-workspace/BasicKnowledge/Domain/Stack.h
  F:/CLion-workspace/BasicKnowledge/Domain/String.h

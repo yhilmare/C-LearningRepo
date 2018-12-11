@@ -18,6 +18,7 @@
 #include "Domain/String.h"
 #include "Domain/Stack.h"
 #include "Domain/Person.h"
+#include "Domain/Manager.h"
 
 using std::cout;
 using std::cin;
@@ -56,8 +57,51 @@ int main() {
 void Chapter13(){
     using namespace std;
     {
+        /*
+         * C++中类的继承：
+         * 1. 子类要负责父类的继承。
+         * 2. 父类中的变量子类无法覆盖，这一点和Java是非常类似的：假如说父类如下所示：
+         *    class super{
+         *    public:
+         *         string name = "super";
+         *         void get_name(){
+         *             cout << name;
+         *         }
+         *    }
+         *    class sub: public super{
+         *    public:
+         *         string name = "sub";
+         *    }
+         *    sub s = sub();
+         *    s.get_name();
+         *    此时将会输出super。其实在python中如果是相同逻辑的代码那么将会输出sub，但是C++和Java中就会输出super，这是因为在sub中的name没有
+         *    覆盖super中的name，调用get_name时编译器会首先调用super中的而不是sub里面的。
+         * 3. 子类无法使用父类的私有方法和私有变量。
+         * 4. C++中拥有三种继承方式：公有继承，保护继承，私有继承。
+         * 5. C++中实现类多态的方法有两种：
+         *    1. 虚函数（virtual）：这种方法适用于使用指针或者引用指向对象，如果父类和子类中都定义了一个方法func()，现在使用一个父类指针或者引用指向子类
+         *       对象，使用这个指针或者引用调用func()方法，那么编译器将根据指针或者引用的类型来决定调用哪一个func()，也就是说这个例子中将会调用父类的func()，
+         *       即使指针或引用指向的是子类对象，但是指针或者引用类型是父类，那么调用就还是会调用父类的同名方法。需要严重注明的是：如果类中包含析构函数，那么析构函数
+         *       最好也设置为virtual的，因为若使用指针或引用那么析构函数将面临上面同样的问题。在这一点上类成员变量和类方法的行为相同，
+         *       但是不能在成员变量前加上virtual关键字，virtual关键字使用来修饰非静态成员函数的。
+         *    2. 在派生类中重新定义基类方法。这种方式适用于通过对象而非指针或者引用调用的方法。
+         *    无论哪一种方法，在子类重载父类方法时，若在子类方法中要调用父类的方法必须要使用作用与预算符::，如果不使用，则会引发递归调用。
+         *
+         * */
         Person p = Person("Ann", females, 25);
         cout << p << endl;
+        p.get_name();
+
+        Manager m = Manager("David", males, 45, 15000);
+        m.get_salary();
+        m.name = "Smith";
+        m.get_name();
+        cout << m << endl;
+
+        Person *pp;
+        pp = &m;
+        pp->func();
+
     }
 }
 
