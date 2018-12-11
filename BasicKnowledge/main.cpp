@@ -17,6 +17,7 @@
 #include <iomanip>
 #include "Domain/String.h"
 #include "Domain/Stack.h"
+#include "Domain/Person.h"
 
 using std::cout;
 using std::cin;
@@ -54,8 +55,12 @@ int main() {
 
 void Chapter13(){
     using namespace std;
-    cout << "Hello,world" << endl;
+    {
+        Person p = Person("Ann", females, 25);
+        cout << p << endl;
+    }
 }
+
 void Chapter12(){
     using namespace std;
 

@@ -86,6 +86,12 @@
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Date.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Person.cpp">
+			<Option target="BasicKnowledge"/>
+		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Person.h">
+			<Option target="BasicKnowledge"/>
+		</Unit>
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Stack.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
