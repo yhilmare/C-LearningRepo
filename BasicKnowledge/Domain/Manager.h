@@ -16,6 +16,7 @@ public:
     Manager(const string &name, p_gender gen, int age, int salary);
     void get_salary();
     void func();
+    virtual void func_1(string name);
 };
 
 

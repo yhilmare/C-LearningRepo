@@ -15,6 +15,9 @@ ostream &operator<<(ostream &os, const Person &p){
 void Person::func() {
     cout << "This is Person, this is " << this << endl;
 }
+void Person::func_1() {
+    cout << "This is Person::func_1(), this is " << this << endl;
+}
 
 void Person::show() {
     cout << "This is Person show()" << endl;

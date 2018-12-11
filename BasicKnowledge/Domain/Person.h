@@ -25,6 +25,7 @@ public:
     Person(const string &name, p_gender gen, int age);
     void get_name() const;
     virtual void func();
+    virtual void func_1();
 
     friend ostream &operator<<(ostream &os, const Person &p);
 

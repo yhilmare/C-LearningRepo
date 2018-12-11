@@ -16,3 +16,6 @@ void Manager::func() {
     Person::func();
     cout << "This is Manager, this is " << this << endl;
 }
+void Manager::func_1(string name) {
+    cout << "This is Manager::func_1(), this is " << this << endl;
+}
