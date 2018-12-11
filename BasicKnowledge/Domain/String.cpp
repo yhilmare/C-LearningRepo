@@ -80,9 +80,7 @@ std::istream &operator>>(std::istream &is, String &obj){
         obj.p = new char[obj.len + 1];
         strcpy(obj.p, tmp_str);
     }
-    while (is && is.get() != '\n'){
-        continue;
-    }
+    while (is && is.get() != '\n');
     return is;
 }
 

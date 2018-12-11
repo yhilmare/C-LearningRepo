@@ -6,26 +6,35 @@
 #define BASICKNOWLEDGE_STACK_H
 
 #include <string>
+#include <iostream>
 class customer{
 private:
     std::string name;
     int age;
 public:
+    customer(){}
+    customer(const std::string &pa, int p2){
+        name = pa;
+        age = p2;
+    }
     friend std::ostream &operator<<(std::ostream &os, const customer &s);
 };
+
 inline std::ostream &operator<<(std::ostream &os, const customer &s){
-//    os << "\{" << s.name << ", " << s.age << "\}";
+    os << "{name: \"" << s.name << "\", age:" << s.age << "}";
     return os;
 }
+
 
 typedef customer Item;
 
 class Stack {
-private:
+public:
     struct Node{
         Item item;
         Node *p_next;
     };
+private:
     Node *p_first;
     Node *p_current;
     int stack_size;

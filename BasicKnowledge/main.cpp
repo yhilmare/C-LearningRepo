@@ -16,6 +16,7 @@
 #include "Domain/Date.h"
 #include <iomanip>
 #include "Domain/String.h"
+#include "Domain/Stack.h"
 
 using std::cout;
 using std::cin;
@@ -31,6 +32,7 @@ void Chapter9();
 void Chapter10();
 void Chapter11();
 void Chapter12();
+void Chapter13();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -45,10 +47,15 @@ int main() {
 //    Chapter9();
 //    Chapter10();
 //    Chapter11();
-    Chapter12();
+//    Chapter12();
+    Chapter13();
     return 0;
 }
 
+void Chapter13(){
+    using namespace std;
+    cout << "Hello,world" << endl;
+}
 void Chapter12(){
     using namespace std;
 
@@ -118,11 +125,25 @@ void Chapter12(){
         cout << "s1 < s2's result is " << (s1 < s2 ? "true" : "false") << endl;
         cout << "s1 == s2's result is " << (s1 == s2 ? "true" : "false") << endl;
 
-        String s3;
-        cin >> s3;
-        cout << s3 << endl;
+//        String s3;
+//        cin >> s3;
+//        cout << s3 << endl;
     }
     cout << "num_strings is " << String::how_many() << endl;
+
+    cout << "================================" << endl;
+    {
+        Stack st = Stack();
+        customer c = customer("David", 15);
+        st.push(c);
+        customer c2 = customer("Smith", 14);
+        st.push(c2);
+        customer c3 = customer("Ann", 29);
+        st.push(c3);
+        cout << st << ", the size of it is " << st.get_size() << endl;
+        cout << st.pop() << endl;
+        cout << st << endl;
+    }
 }
 
 Time operator-(double a, const Time &b);

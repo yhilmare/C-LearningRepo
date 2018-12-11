@@ -22,6 +22,7 @@ int Stack::get_size() {
 bool Stack::push(Item &item) {
     Node *p_new = new Node[1];
     p_new->item = item;
+    stack_size ++;
     if (p_first->p_next == NULL){
         p_first->p_next = p_new;
         p_new->p_next = NULL;
@@ -37,8 +38,11 @@ Item Stack::pop() {
     if (p_first->p_next == NULL){
         return Item();
     }
+    stack_size --;
     p_current = p_first->p_next;
     Item result = p_current->item;
+    p_first->p_next = p_current->p_next;
+    p_current->p_next = NULL;
     delete []p_current;
     return result;
 }
@@ -49,9 +53,10 @@ Stack::~Stack() {
         delete []p;
     }
 }
-std::ostream& Stack::operator<<(std::ostream &os, const Stack &s) {
-    for (Node *p = p_first->p_next; p; p = p->p_next){
-        cout << p->item << " - ";
+std::ostream &operator<<(std::ostream &os, const Stack &s) {
+    for (Stack::Node *p = s.p_first->p_next; p; p = p->p_next){
+        p->p_next ? cout << p->item << " -> " : cout << p->item;
     }
+    return os;
 }
 
