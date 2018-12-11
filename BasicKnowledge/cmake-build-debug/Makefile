@@ -149,6 +149,33 @@ Domain/Date.cpp.s:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.s
 .PHONY : Domain/Date.cpp.s
 
+Domain/Manager.obj: Domain/Manager.cpp.obj
+
+.PHONY : Domain/Manager.obj
+
+# target to build an object file
+Domain/Manager.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.obj
+.PHONY : Domain/Manager.cpp.obj
+
+Domain/Manager.i: Domain/Manager.cpp.i
+
+.PHONY : Domain/Manager.i
+
+# target to preprocess a source file
+Domain/Manager.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.i
+.PHONY : Domain/Manager.cpp.i
+
+Domain/Manager.s: Domain/Manager.cpp.s
+
+.PHONY : Domain/Manager.s
+
+# target to generate assembly for a file
+Domain/Manager.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Manager.cpp.s
+.PHONY : Domain/Manager.cpp.s
+
 Domain/Person.obj: Domain/Person.cpp.obj
 
 .PHONY : Domain/Person.obj
@@ -350,6 +377,9 @@ help:
 	@echo ... Domain/Date.obj
 	@echo ... Domain/Date.i
 	@echo ... Domain/Date.s
+	@echo ... Domain/Manager.obj
+	@echo ... Domain/Manager.i
+	@echo ... Domain/Manager.s
 	@echo ... Domain/Person.obj
 	@echo ... Domain/Person.i
 	@echo ... Domain/Person.s
