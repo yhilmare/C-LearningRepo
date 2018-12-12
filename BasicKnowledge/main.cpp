@@ -36,6 +36,7 @@ void Chapter10();
 void Chapter11();
 void Chapter12();
 void Chapter13();
+void Chapter14();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -51,12 +52,27 @@ int main() {
 //    Chapter10();
 //    Chapter11();
 //    Chapter12();
-    Chapter13();
+    Chapter14();
     return 0;
 }
 
+class super{
+private:
+    string pri = "super-private";
+protected:
+    string pro = "super-protected";
+public:
+    string pub = "super-public";
+    void show_super(){
+        cout << "pri: " << pri << ", pro: " << pro << ", pub: " << pub << endl;
+    }
+    void show(){
+        cout << "This is super::show()" << endl;
+    }
+};
 
 void Chapter14(){
+
 
 }
 void Chapter13(){
@@ -103,6 +119,7 @@ void Chapter13(){
         cout << p << endl;
         p.get_name();
 
+
         Manager m = Manager("David", males, 45, 15000);
         m.get_salary();
         m.name = "Smith";
@@ -115,6 +132,7 @@ void Chapter13(){
         pp->func();
         m.func_1("David");
         pp->func_1();
+
     }
     {
         /*

@@ -4,7 +4,10 @@
 
 #include "Person.h"
 #include <iostream>
-Person::Person(const string &name, p_gender gen, int age): name(name), gen(gen), age(age){}
+Person::Person(const string &name, p_gender gen, int age): name(name), gen(gen), age(age){
+    this->p = new char[20];
+    strcpy(p, "I love my country");
+}
 void Person::get_name() const {
     cout << this->name << endl;
 }

@@ -19,6 +19,10 @@ F:/CLion-workspace/BasicKnowledge/Domain/Person.h
 F:/CLion-workspace/BasicKnowledge/Domain/Person.h
 string
 -
+cstring
+-
+iostream
+-
 
 F:/CLion-workspace/BasicKnowledge/Domain/Stack.h
 string
@@ -31,12 +35,6 @@ iostream
 -
 
 F:/CLion-workspace/BasicKnowledge/Domain/time.h
-iostream
--
-
-F:/CLion-workspace/BasicKnowledge/abc/abc.cpp
-abc.h
-F:/CLion-workspace/BasicKnowledge/abc/abc.h
 iostream
 -
 

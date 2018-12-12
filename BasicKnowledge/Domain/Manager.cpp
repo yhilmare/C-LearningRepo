@@ -7,10 +7,11 @@
 
 Manager::Manager(const string &name, p_gender gen, int age, int salary): Person(name, gen, age) {
     this->salary = salary;
+    this->label = new char[20];
 }
 
 void Manager::get_salary() {
-    cout << "salary is " << salary << endl;
+    cout << "salary is " << salary << ", test is " << test << endl;
 }
 void Manager::func() {
     Person::func();
