@@ -19,6 +19,7 @@
 #include "Domain/Stack.h"
 #include "Domain/Person.h"
 #include "Domain/Manager.h"
+#include "abc/abc.h"
 
 using std::cout;
 using std::cin;
@@ -54,9 +55,13 @@ int main() {
     return 0;
 }
 
+
+void Chapter14(){
+
+}
 void Chapter13(){
-    using namespace std;
     {
+        using namespace std;
         /*
          * C++中类的继承：
          * 1. 子类要负责父类的继承。
@@ -88,6 +93,11 @@ void Chapter13(){
          *    2. 在派生类中重新定义基类方法。这种方式适用于通过对象而非指针或者引用调用的方法。
          *
          *    无论哪一种方法，在子类重载父类方法时，若在子类方法中要调用父类的方法必须要使用作用与预算符::，如果不使用，则会引发递归调用。
+         * 6. 构造函数不应该是虚的，但是析构函数若有子类继承则应该是虚的。
+         * 7. C++中的虚函数表，这是虚函数得以发挥作用的关键。
+         * 8. 子类若重新定义父类的方法，即使参数不同也会覆盖父类的同名方法，无论是否为虚函数。由此引出了返回值协变和多个同名方法的覆盖问题。
+         *    （有一个总结出来的小trick：使用引用或指针时，若使用基类指针指向子类对象，那么父类指针调用的无论是方法还是共有变量都是父类中的，不管
+         *      子类有没有覆盖父类的方法，或者重载父类的方法。但是唯一的例外就是子类重载了父类的虚函数，那么这种调用就会使用子类的重载方法。）
          * */
         Person p = Person("Ann", females, 25);
         cout << p << endl;
@@ -99,12 +109,31 @@ void Chapter13(){
         m.get_name();
         cout << m << endl;
 
+        cout << "=======================" << endl;
         Person *pp;
         pp = &m;
         pp->func();
-
         m.func_1("David");
-        p.func_1();
+        pp->func_1();
+    }
+    {
+        /*
+         * 抽象基类
+         * 1. 包含有纯虚函数的类被称为抽象类或者抽象基类，这种类不能被实例化，但是可以包含构造函数。
+         * 2. 纯虚函数是指在成员函数末尾有=0写法的函数，类似于virtual void func() = 0;这种函数最好不要在抽象基类中实现，因为实现了也没有什么意义。
+         * 3. 抽象基类的子类必须负责抽闲积累的构造，并且一定要实现抽闲基类的所有纯虚函数。
+         * 4. 抽象基类的继承和普通类
+         * 继承所有细节都一致。
+         * */
+        cout << "===============================" << endl;
+        using abc_example::Person;
+        using abc_example::Doctor;
+        Doctor d = Doctor(string("David"), 25, 185, 1, 15000);
+        Person &p_a = d;
+        p_a.show_name();
+        p_a.show_level();
+        p_a.show_type();
+        p_a.func();
     }
 }
 

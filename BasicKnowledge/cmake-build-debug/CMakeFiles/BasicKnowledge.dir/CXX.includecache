@@ -12,12 +12,6 @@ iostream
 iomanip
 -
 
-F:/CLion-workspace/BasicKnowledge/Domain/Manager.cpp
-Manager.h
-F:/CLion-workspace/BasicKnowledge/Domain/Manager.h
-iostream
--
-
 F:/CLion-workspace/BasicKnowledge/Domain/Manager.h
 Person.h
 F:/CLion-workspace/BasicKnowledge/Domain/Person.h
@@ -38,6 +32,16 @@ iostream
 
 F:/CLion-workspace/BasicKnowledge/Domain/time.h
 iostream
+-
+
+F:/CLion-workspace/BasicKnowledge/abc/abc.cpp
+abc.h
+F:/CLion-workspace/BasicKnowledge/abc/abc.h
+iostream
+-
+
+F:/CLion-workspace/BasicKnowledge/abc/abc.h
+string
 -
 
 F:/CLion-workspace/BasicKnowledge/classes/stock.h
@@ -103,4 +107,6 @@ Domain/Person.h
 F:/CLion-workspace/BasicKnowledge/Domain/Person.h
 Domain/Manager.h
 F:/CLion-workspace/BasicKnowledge/Domain/Manager.h
+abc/abc.h
+F:/CLion-workspace/BasicKnowledge/abc/abc.h
 

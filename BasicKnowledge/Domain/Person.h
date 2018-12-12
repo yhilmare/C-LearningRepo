@@ -17,6 +17,7 @@ private:
     int age;
 public:
     string name;
+    string str = "super";
     Person(){
         name = string("unkonwn");
         gen = males;

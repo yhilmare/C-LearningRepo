@@ -284,6 +284,33 @@ Domain/time.cpp.s:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.s
 .PHONY : Domain/time.cpp.s
 
+abc/abc.obj: abc/abc.cpp.obj
+
+.PHONY : abc/abc.obj
+
+# target to build an object file
+abc/abc.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj
+.PHONY : abc/abc.cpp.obj
+
+abc/abc.i: abc/abc.cpp.i
+
+.PHONY : abc/abc.i
+
+# target to preprocess a source file
+abc/abc.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.i
+.PHONY : abc/abc.cpp.i
+
+abc/abc.s: abc/abc.cpp.s
+
+.PHONY : abc/abc.s
+
+# target to generate assembly for a file
+abc/abc.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.s
+.PHONY : abc/abc.cpp.s
+
 classes/stock.obj: classes/stock.cpp.obj
 
 .PHONY : classes/stock.obj
@@ -392,6 +419,9 @@ help:
 	@echo ... Domain/time.obj
 	@echo ... Domain/time.i
 	@echo ... Domain/time.s
+	@echo ... abc/abc.obj
+	@echo ... abc/abc.i
+	@echo ... abc/abc.s
 	@echo ... classes/stock.obj
 	@echo ... classes/stock.i
 	@echo ... classes/stock.s

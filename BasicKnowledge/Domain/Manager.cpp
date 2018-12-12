@@ -19,3 +19,6 @@ void Manager::func() {
 void Manager::func_1(string name) {
     cout << "This is Manager::func_1(), this is " << this << endl;
 }
+void Manager::func_1() {
+    cout << "This is Manager::func_1() without name, this is " << this << endl;
+}

@@ -20,6 +20,9 @@ CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj
 CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/time.cpp
  F:/CLion-workspace/BasicKnowledge/Domain/time.h
+CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj
+ F:/CLion-workspace/BasicKnowledge/abc/abc.cpp
+ F:/CLion-workspace/BasicKnowledge/abc/abc.h
 CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj
  F:/CLion-workspace/BasicKnowledge/classes/stock.cpp
  F:/CLion-workspace/BasicKnowledge/classes/stock.h
@@ -34,6 +37,7 @@ CMakeFiles/BasicKnowledge.dir/main.cpp.obj
  F:/CLion-workspace/BasicKnowledge/Domain/Stack.h
  F:/CLion-workspace/BasicKnowledge/Domain/String.h
  F:/CLion-workspace/BasicKnowledge/Domain/time.h
+ F:/CLion-workspace/BasicKnowledge/abc/abc.h
  F:/CLion-workspace/BasicKnowledge/classes/stock.h
  F:/CLion-workspace/BasicKnowledge/lib/coordin.h
  F:/CLion-workspace/BasicKnowledge/lib/namespace.h

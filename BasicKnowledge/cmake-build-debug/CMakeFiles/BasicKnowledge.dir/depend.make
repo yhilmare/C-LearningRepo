@@ -20,6 +20,9 @@ CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj: ../Domain/String.h
 CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj: ../Domain/time.cpp
 CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj: ../Domain/time.h
 
+CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj: ../abc/abc.cpp
+CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj: ../abc/abc.h
+
 CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj: ../classes/stock.cpp
 CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj: ../classes/stock.h
 
@@ -33,6 +36,7 @@ CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/Person.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/Stack.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/String.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/time.h
+CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../abc/abc.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../classes/stock.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../lib/coordin.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../lib/namespace.h
