@@ -56,23 +56,7 @@ int main() {
     return 0;
 }
 
-class super{
-private:
-    string pri = "super-private";
-protected:
-    string pro = "super-protected";
-public:
-    string pub = "super-public";
-    void show_super(){
-        cout << "pri: " << pri << ", pro: " << pro << ", pub: " << pub << endl;
-    }
-    void show(){
-        cout << "This is super::show()" << endl;
-    }
-};
-
 void Chapter14(){
-
 
 }
 void Chapter13(){
