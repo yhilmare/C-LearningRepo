@@ -20,6 +20,7 @@
 #include "Domain/Person.h"
 #include "Domain/Manager.h"
 #include "abc/abc.h"
+#include <valarray>
 
 using std::cout;
 using std::cin;
@@ -55,9 +56,32 @@ int main() {
     Chapter14();
     return 0;
 }
+class super{
+public:
+    string name = "super";
+    void getname(){
+        cout << "This is super" << endl;
+    }
+};
+class sub: private super{
+public:
+    string name = "sub";
+    void getname(){
+        cout << "This is sub" << endl;
+    }
 
+};
 void Chapter14(){
+    using namespace std;
 
+    valarray<double> a = valarray<double>(8, 20);
+    for (double item : a){
+        cout << item << " ";
+    }
+    cout << endl;
+    sub s1 = sub();
+    super &s = (super &)s1;
+    s.getname();
 }
 void Chapter13(){
     {
