@@ -21,6 +21,7 @@
 #include "Domain/Manager.h"
 #include "abc/abc.h"
 #include <valarray>
+#include "Domain/Student.h"
 
 using std::cout;
 using std::cin;
@@ -56,21 +57,7 @@ int main() {
     Chapter14();
     return 0;
 }
-class super{
-public:
-    string name = "super";
-    void getname(){
-        cout << "This is super" << endl;
-    }
-};
-class sub: private super{
-public:
-    string name = "sub";
-    void getname(){
-        cout << "This is sub" << endl;
-    }
 
-};
 void Chapter14(){
     using namespace std;
 
@@ -79,9 +66,14 @@ void Chapter14(){
         cout << item << " ";
     }
     cout << endl;
-    sub s1 = sub();
-    super &s = (super &)s1;
-    s.getname();
+
+    {
+        valarray<double> val = {98.5 , 96.4, 91.5, 85.4, 87.6, 89.4, 88.1, 90.5, 95.4};
+        Student s = Student("David", val);
+        cout << s << endl;
+        s[5] = 14;
+        cout << s[5] << endl;
+    }
 }
 void Chapter13(){
     {

@@ -257,6 +257,33 @@ Domain/String.cpp.s:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.s
 .PHONY : Domain/String.cpp.s
 
+Domain/Student.obj: Domain/Student.cpp.obj
+
+.PHONY : Domain/Student.obj
+
+# target to build an object file
+Domain/Student.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Student.cpp.obj
+.PHONY : Domain/Student.cpp.obj
+
+Domain/Student.i: Domain/Student.cpp.i
+
+.PHONY : Domain/Student.i
+
+# target to preprocess a source file
+Domain/Student.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Student.cpp.i
+.PHONY : Domain/Student.cpp.i
+
+Domain/Student.s: Domain/Student.cpp.s
+
+.PHONY : Domain/Student.s
+
+# target to generate assembly for a file
+Domain/Student.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/Student.cpp.s
+.PHONY : Domain/Student.cpp.s
+
 Domain/time.obj: Domain/time.cpp.obj
 
 .PHONY : Domain/time.obj
@@ -416,6 +443,9 @@ help:
 	@echo ... Domain/String.obj
 	@echo ... Domain/String.i
 	@echo ... Domain/String.s
+	@echo ... Domain/Student.obj
+	@echo ... Domain/Student.i
+	@echo ... Domain/Student.s
 	@echo ... Domain/time.obj
 	@echo ... Domain/time.i
 	@echo ... Domain/time.s

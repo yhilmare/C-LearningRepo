@@ -34,6 +34,12 @@ F:/CLion-workspace/BasicKnowledge/Domain/String.h
 iostream
 -
 
+F:/CLion-workspace/BasicKnowledge/Domain/Student.h
+string
+-
+valarray
+-
+
 F:/CLion-workspace/BasicKnowledge/Domain/time.h
 iostream
 -
@@ -109,4 +115,6 @@ abc/abc.h
 F:/CLion-workspace/BasicKnowledge/abc/abc.h
 valarray
 -
+Domain/Student.h
+F:/CLion-workspace/BasicKnowledge/Domain/Student.h
 
