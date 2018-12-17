@@ -122,6 +122,33 @@ BasicKnowledge/fast:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/build
 .PHONY : BasicKnowledge/fast
 
+ClassTemplate/Queue.obj: ClassTemplate/Queue.cpp.obj
+
+.PHONY : ClassTemplate/Queue.obj
+
+# target to build an object file
+ClassTemplate/Queue.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/ClassTemplate/Queue.cpp.obj
+.PHONY : ClassTemplate/Queue.cpp.obj
+
+ClassTemplate/Queue.i: ClassTemplate/Queue.cpp.i
+
+.PHONY : ClassTemplate/Queue.i
+
+# target to preprocess a source file
+ClassTemplate/Queue.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/ClassTemplate/Queue.cpp.i
+.PHONY : ClassTemplate/Queue.cpp.i
+
+ClassTemplate/Queue.s: ClassTemplate/Queue.cpp.s
+
+.PHONY : ClassTemplate/Queue.s
+
+# target to generate assembly for a file
+ClassTemplate/Queue.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/ClassTemplate/Queue.cpp.s
+.PHONY : ClassTemplate/Queue.cpp.s
+
 Domain/Date.obj: Domain/Date.cpp.obj
 
 .PHONY : Domain/Date.obj
@@ -455,6 +482,9 @@ help:
 	@echo ... BasicKnowledge
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... ClassTemplate/Queue.obj
+	@echo ... ClassTemplate/Queue.i
+	@echo ... ClassTemplate/Queue.s
 	@echo ... Domain/Date.obj
 	@echo ... Domain/Date.i
 	@echo ... Domain/Date.s

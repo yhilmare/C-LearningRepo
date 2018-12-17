@@ -23,6 +23,8 @@
 #include <valarray>
 #include "Domain/Student.h"
 #include "ML/Worker.h"
+#include "ClassTemplate/Queue.h"
+#include "ClassTemplate/StackTemp.h"
 
 using std::cout;
 using std::cin;
@@ -58,12 +60,27 @@ int main() {
     Chapter14();
     return 0;
 }
+class cust{
+private:
+    string name;
+    int age;
+public:
+    cust():name("unknown"), age(-1){}
+    cust(const string &s, int age):name(s), age(age){}
 
-void Chapter14(){
+    void getname(){
+        cout << "name is " << name << endl;
+    }
+    void getage(){
+        cout << "age is " << age << endl;
+    }
+};
+
+void Chapter14() {
     using namespace std;
 
     valarray<double> a = valarray<double>(8, 20);
-    for (double item : a){
+    for (double item : a) {
         cout << item << " ";
     }
     cout << endl;
@@ -83,7 +100,7 @@ void Chapter14(){
          *    但是却能看见保护继承下基类的公有成员，这正是保护继承和私有继承在基类公有和保护成员上处理不同导致的。
          * 保护继承和私有继承其实没什么用，事实上在java中直接删除了保护继承和私有继承，只保留公有继承。
          * */
-        valarray<double> val = {98.5 , 96.4, 91.5, 85.4, 87.6, 89.4, 88.1, 90.5, 95.4};
+        valarray<double> val = {98.5, 96.4, 91.5, 85.4, 87.6, 89.4, 88.1, 90.5, 95.4};
         Student s = Student("David", val);
         cout << s << endl;
         s[5] = 14;
@@ -100,8 +117,51 @@ void Chapter14(){
          * 3. 多继承中处于最底层的子类，如果要调用其的一个方法，而这个方法在其不止一个父类中定义过，那么要在该子类中重新定义，否则会引发二义性。
          * */
         SingerWaiter sw = SingerWaiter("David", 5);
-        sw.Set();
-        sw.show();
+//        sw.Set();
+//        sw.show();
+    }
+    {
+        /*
+         * 类模板和函数模板有相似的地方，跟Java中的泛型在概念上也十分类似，但是在C++的类中使用类模板还是要注意一些地方：
+         * 1. C++中类使用模板的情况下使用域解析操作符::时必须将类泛型类型带上，举例如下：
+         *    template <class T>
+         *    class A{
+         *    public:
+         *        void getname(){
+         *            cout << "在类内部不需要使用类的泛型" << endl;
+         *        }
+         *        void getage();
+         *    };
+         *    template <class T>
+         *    void A<T>::getage(){
+         *        cout << "但是在类的外部就需要使用类的泛型了" << endl;
+         *    }
+         * 2. 类模板中的成员函数（友元函数不是成员函数，例外）定义不能在普通的cpp文件中，最简单的方法是将所有的定义都放在头文件中。
+         * 3. 类模板中可以传入指针模板，也就是Class<char *> p = Class<char *>()。在这种情况下一般在类中使用一个二重指针（本例中是char **）
+         *    来管理，这样做的理由是二重指针是指向指针数组首地址的指针，可以用来管理指针。具体例子见代码：
+         *
+         * */
+        Queue<cust> q = Queue<cust>();
+        cust c = cust("David", 35);
+        cust c2 = cust("Smith", 28);
+        q.en_queue(c);
+        q.en_queue(c2);
+        cust c1 = q.de_quese();
+        cust c3 = q.de_quese();
+        c1.getname();
+        c1.getage();
+
+        c3.getname();
+        c3.getage();
+        {
+            Queue<char *> q = Queue<char *>();
+            char *tmp = new char[40];
+            strcpy(tmp, "Hello");
+            q.en_queue(tmp);
+
+            delete[]tmp;
+        }
+        StackTemp<char *> ss = StackTemp<char *>(10);
     }
 }
 void Chapter13(){

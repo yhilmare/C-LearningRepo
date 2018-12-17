@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.cpp
+Queue.h
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
+
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
+iostream
+-
+
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
+iostream
+-
+
 F:/CLion-workspace/BasicKnowledge/Domain/Date.h
 iostream
 -
@@ -41,12 +53,6 @@ valarray
 -
 
 F:/CLion-workspace/BasicKnowledge/Domain/time.h
-iostream
--
-
-F:/CLion-workspace/BasicKnowledge/ML/Worker.cpp
-Worker.h
-F:/CLion-workspace/BasicKnowledge/ML/Worker.h
 iostream
 -
 
@@ -129,4 +135,8 @@ Domain/Student.h
 F:/CLion-workspace/BasicKnowledge/Domain/Student.h
 ML/Worker.h
 F:/CLion-workspace/BasicKnowledge/ML/Worker.h
+ClassTemplate/Queue.h
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
+ClassTemplate/StackTemp.h
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
 
