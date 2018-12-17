@@ -44,6 +44,16 @@ F:/CLion-workspace/BasicKnowledge/Domain/time.h
 iostream
 -
 
+F:/CLion-workspace/BasicKnowledge/ML/Worker.cpp
+Worker.h
+F:/CLion-workspace/BasicKnowledge/ML/Worker.h
+iostream
+-
+
+F:/CLion-workspace/BasicKnowledge/ML/Worker.h
+string
+-
+
 F:/CLion-workspace/BasicKnowledge/abc/abc.h
 string
 -
@@ -117,4 +127,6 @@ valarray
 -
 Domain/Student.h
 F:/CLion-workspace/BasicKnowledge/Domain/Student.h
+ML/Worker.h
+F:/CLion-workspace/BasicKnowledge/ML/Worker.h
 

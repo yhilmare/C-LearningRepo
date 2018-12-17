@@ -122,6 +122,12 @@
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/time.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/ML/Worker.cpp">
+			<Option target="BasicKnowledge"/>
+		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/ML/Worker.h">
+			<Option target="BasicKnowledge"/>
+		</Unit>
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/abc/abc.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>

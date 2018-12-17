@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "F:/CLion-workspace/BasicKnowledge/Domain/String.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/Domain/String.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/Domain/Student.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/Domain/Student.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/Domain/time.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.obj"
+  "F:/CLion-workspace/BasicKnowledge/ML/Worker.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/ML/Worker.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/abc/abc.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/classes/stock.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj"
   "F:/CLion-workspace/BasicKnowledge/lib/function.cpp" "F:/CLion-workspace/BasicKnowledge/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj"

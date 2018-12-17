@@ -311,6 +311,33 @@ Domain/time.cpp.s:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/Domain/time.cpp.s
 .PHONY : Domain/time.cpp.s
 
+ML/Worker.obj: ML/Worker.cpp.obj
+
+.PHONY : ML/Worker.obj
+
+# target to build an object file
+ML/Worker.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/ML/Worker.cpp.obj
+.PHONY : ML/Worker.cpp.obj
+
+ML/Worker.i: ML/Worker.cpp.i
+
+.PHONY : ML/Worker.i
+
+# target to preprocess a source file
+ML/Worker.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/ML/Worker.cpp.i
+.PHONY : ML/Worker.cpp.i
+
+ML/Worker.s: ML/Worker.cpp.s
+
+.PHONY : ML/Worker.s
+
+# target to generate assembly for a file
+ML/Worker.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/ML/Worker.cpp.s
+.PHONY : ML/Worker.cpp.s
+
 abc/abc.obj: abc/abc.cpp.obj
 
 .PHONY : abc/abc.obj
@@ -449,6 +476,9 @@ help:
 	@echo ... Domain/time.obj
 	@echo ... Domain/time.i
 	@echo ... Domain/time.s
+	@echo ... ML/Worker.obj
+	@echo ... ML/Worker.i
+	@echo ... ML/Worker.s
 	@echo ... abc/abc.obj
 	@echo ... abc/abc.i
 	@echo ... abc/abc.s

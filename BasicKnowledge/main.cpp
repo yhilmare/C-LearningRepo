@@ -22,6 +22,7 @@
 #include "abc/abc.h"
 #include <valarray>
 #include "Domain/Student.h"
+#include "ML/Worker.h"
 
 using std::cout;
 using std::cin;
@@ -57,26 +58,7 @@ int main() {
     Chapter14();
     return 0;
 }
-class A{
-public:
-    void getname(){
-        cout << "This is A" << endl;
-    }
-};
-class B: virtual public A{
-public:
-    string name = "B";
-};
-class C: virtual public A{
-public:
-    string name = "C";
-    void getname(){
-        cout << "This is C" << endl;
-    }
-};
-class D: public B, public C{
 
-};
 void Chapter14(){
     using namespace std;
 
@@ -117,9 +99,9 @@ void Chapter14(){
          * 2. 使用虚基类时要注意使用新的构造函数语法：最低层级的子类要负责最高层级父类的构造。
          * 3. 多继承中处于最底层的子类，如果要调用其的一个方法，而这个方法在其不止一个父类中定义过，那么要在该子类中重新定义，否则会引发二义性。
          * */
-        D d = D();
-        d.getname();
-
+        SingerWaiter sw = SingerWaiter("David", 5);
+        sw.Set();
+        sw.show();
     }
 }
 void Chapter13(){
