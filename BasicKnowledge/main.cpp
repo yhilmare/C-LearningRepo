@@ -139,7 +139,38 @@ void Chapter14() {
          * 2. 类模板中的成员函数（友元函数不是成员函数，例外）定义不能在普通的cpp文件中，最简单的方法是将所有的定义都放在头文件中。
          * 3. 类模板中可以传入指针模板，也就是Class<char *> p = Class<char *>()。在这种情况下一般在类中使用一个二重指针（本例中是char **）
          *    来管理，这样做的理由是二重指针是指向指针数组首地址的指针，可以用来管理指针。具体例子见代码：
+         * 4. 模板还可以用来传递参数：template <class C, int n>，后面的int n称为表达式参数，可以是整型，枚举，指针或者引用（注意不能是double，但可以是
+         *    double *或者double &），在使用中表达式参数被当做常量来用，不能修改其值。（感觉并没有什么用）
+         * 5. 类模板的具体化：
+         *    1. 显式实例化。
+         *    2. 隐式实例化。
+         *    3. 显示具体化（又包含了部分显示具体化）。
+         * 6. 成员函数的模板：这一点个人觉得不要使用，如果函数中还有模板需要使用，那么最好在类定义的开头就将所有的模板都写出来，不要在成员函数声明时再使用模板
+         * 7. 友元函数的模板：
+         *    1. 模板类的非模板友元函数：这种友元函数跟类模板没有任何关系，最多使用了模板类：
+         *       friend void show(Class a);
+         *       //xxx.cpp
+         *       void show(Class<int> a){
+         *           ...
+         *       }
+         *       void show(Class<double> a){
+         *           ...
+         *       }
+         *       ...
+         *    2. 模板类的约束模板友元函数：这种类型的友元是被模板类约束的，通常情况下需要分三步才能完整的声明和定义这种被约束的模板友元函数：
+         *       template <class T> void show(T &);//第一步先声明友元函数原型
+         *       template <class T>
+         *       class A{
+         *       public:
+         *           friend void show<>(A<T> &);//在类的内部声明这个友元函数
+         *           //friend void show<A<T>>(A<T> &);//这种写法也可以
+         *       }
          *
+         *       template <class T>
+         *       void show(A<T> &t){//最后实现该友元函数，需要注意的是：这个友元函数的实现必须在头文件中定义，不能挪到其他的文件中
+         *           ...
+         *       }
+         *   3. 模板类的非约束模板友元函数：这种类型的友元函数跟模板类成员函数声明到定义都是一致的，唯一的区别就是友元函数不使用::域解析运算符
          * */
         Queue<cust> q = Queue<cust>();
         cust c = cust("David", 35);
@@ -161,9 +192,17 @@ void Chapter14() {
 
             delete[]tmp;
         }
-        StackTemp<char *> ss = StackTemp<char *>(10);
+
+        StackTemp<int> ss = StackTemp<int>(10);
+        ss.getname(25.4);
+        show(ss);
+        show_1(ss);
+        show_2(ss);
+        ss.show_3(StackTemp<int>(20));
     }
 }
+
+
 void Chapter13(){
     {
         using namespace std;

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.cpp
-Queue.h
-F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
-
 F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
 iostream
 -
+
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.cpp
+StackTemp.h
+F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
 
 F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
 iostream

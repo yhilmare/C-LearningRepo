@@ -86,6 +86,9 @@
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.cpp">
+			<Option target="BasicKnowledge"/>
+		</Unit>
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>

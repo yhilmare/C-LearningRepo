@@ -35,6 +35,7 @@ bool Queue<T>::en_queue(const T &con) {
     cursor->pnext = p;
     cursor = p;
     cursor->pnext = NULL;
+    return true;
 }
 
 template <class T>

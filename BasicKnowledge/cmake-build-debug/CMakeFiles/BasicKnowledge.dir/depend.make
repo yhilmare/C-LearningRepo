@@ -4,6 +4,9 @@
 CMakeFiles/BasicKnowledge.dir/ClassTemplate/Queue.cpp.obj: ../ClassTemplate/Queue.cpp
 CMakeFiles/BasicKnowledge.dir/ClassTemplate/Queue.cpp.obj: ../ClassTemplate/Queue.h
 
+CMakeFiles/BasicKnowledge.dir/ClassTemplate/StackTemp.cpp.obj: ../ClassTemplate/StackTemp.cpp
+CMakeFiles/BasicKnowledge.dir/ClassTemplate/StackTemp.cpp.obj: ../ClassTemplate/StackTemp.h
+
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj: ../Domain/Date.cpp
 CMakeFiles/BasicKnowledge.dir/Domain/Date.cpp.obj: ../Domain/Date.h
 
