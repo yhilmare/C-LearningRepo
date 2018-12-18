@@ -23,7 +23,8 @@ public:
     }
     template<class V>
     void getname(V v);
-    friend void show(const StackTemp<T> &s);
+
+    friend void show(const StackTemp &s);
 
     friend void show_1<>(StackTemp<T> &);
 
@@ -31,7 +32,14 @@ public:
     friend void show_2(V &v);
 
     void show_3(const StackTemp<T> &);
+    void show();
 };
+
+template <class T>
+void StackTemp<T>::show() {
+    using namespace std;
+    cout << "This is StackTemp<T>::show()" << endl;
+}
 
 template <class T>
 void StackTemp<T>::show_3(const StackTemp<T> &t) {
@@ -71,6 +79,8 @@ public:
     template <class V>
     void getname(char *t, V &v);
     friend void show(const StackTemp &t);
+
+    void show();
 };
 
 template <class V>
@@ -78,5 +88,7 @@ void StackTemp<char *>::getname(char *s, V &v) {
     using namespace std;
     cout << "Hello,world" << endl;
 }
+
+
 
 #endif //BASICKNOWLEDGE_STACKTEMP_H

@@ -5,10 +5,15 @@
 
 void show(const StackTemp<int> &t){
     using namespace std;
-    cout << "This is friend show()" << endl;
+    cout << "This is friend StackTemp<int> &" << endl;
 }
 
 void show(const StackTemp<char *> &t){
     using namespace std;
-    cout << "This is friend show()" << endl;
+    cout << "show(const StackTemp<char *> &" << endl;
+}
+
+void StackTemp<char *>::show() {
+    using namespace std;
+    cout << "This is StackTemp<char*>::show()" << endl;
 }

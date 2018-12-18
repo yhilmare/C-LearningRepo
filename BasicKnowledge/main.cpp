@@ -199,6 +199,8 @@ void Chapter14() {
         show_1(ss);
         show_2(ss);
         ss.show_3(StackTemp<int>(20));
+
+        ss.show();
     }
 }
 
