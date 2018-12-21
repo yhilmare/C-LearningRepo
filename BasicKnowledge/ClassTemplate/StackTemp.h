@@ -88,7 +88,4 @@ void StackTemp<char *>::getname(char *s, V &v) {
     using namespace std;
     cout << "Hello,world" << endl;
 }
-
-
-
 #endif //BASICKNOWLEDGE_STACKTEMP_H

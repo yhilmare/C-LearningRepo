@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/BasicKnowledge.dir/ML/Worker.cpp.obj"
   "CMakeFiles/BasicKnowledge.dir/ClassTemplate/Queue.cpp.obj"
   "CMakeFiles/BasicKnowledge.dir/ClassTemplate/StackTemp.cpp.obj"
+  "CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.obj"
   "BasicKnowledge.pdb"
   "BasicKnowledge.exe"
   "BasicKnowledge.exe.manifest"

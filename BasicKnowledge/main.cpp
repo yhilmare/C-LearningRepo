@@ -25,6 +25,7 @@
 #include "ML/Worker.h"
 #include "ClassTemplate/Queue.h"
 #include "ClassTemplate/StackTemp.h"
+#include "friendClass/TV.h"
 
 using std::cout;
 using std::cin;
@@ -42,6 +43,7 @@ void Chapter11();
 void Chapter12();
 void Chapter13();
 void Chapter14();
+void Chapter15();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -57,8 +59,32 @@ int main() {
 //    Chapter10();
 //    Chapter11();
 //    Chapter12();
-    Chapter14();
+//    Chapter14();
+    Chapter15();
     return 0;
+}
+
+void Chapter15(){
+    using namespace std;
+
+    {
+        /*
+         * 友元类和友元成员函数知识点较为简单：
+         * 1. 友元类指的是一个类B中将另一个类A声明为友元类（friend class A），则类A中的所有方法都能访问B类中的私有和保护成员变量和函数。
+         *    友元类的声明可以在类的任何位置（可以使私有的，保护的或者公有的）
+         * 2. 友元成员函数指的是一个类A中的某一个方法声明为另一个类B的友元成员函数，那么A中的此方法可以访问B的所有保护和私有成员变量和函数。
+         *    1. A的定义和声明必须先于B（因为在B中声明A的某个方法为友元方法时需要知道A的定义细节）。
+         *    2. A的前面必须有B的类提前声明（class B;），这是因为A中被作为B类友元的成员函数通常需要有一个B的对象引用，所以要使用提前声明
+         *    3. A中被声明为友元的成员函数不能被实现成隐式内联，要么使用inline关键字显式内联实现在B类定义的后面，要么在单独文件中实现，这是因为
+         *       A类中的友元成员函数通常需要使用B中的成员函数或者变量，这就需要完整的B类定义，所以友元成员函数的实现应该晚于B类声明。
+         * */
+        TV<int> tv = TV<int>();
+        Remote re = Remote();
+        re.friendfunc(tv);
+
+        Remote_1 r = Remote_1();
+        r.func(tv);
+    }
 }
 class cust{
 private:
@@ -105,6 +131,7 @@ void Chapter14() {
         cout << s << endl;
         s[5] = 14;
         cout << s[5] << endl;
+
         cout << s.Average() << endl;
     }
     {

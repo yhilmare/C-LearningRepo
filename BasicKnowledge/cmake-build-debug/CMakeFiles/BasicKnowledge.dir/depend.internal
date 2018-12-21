@@ -38,6 +38,9 @@ CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj
 CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj
  F:/CLion-workspace/BasicKnowledge/classes/stock.cpp
  F:/CLion-workspace/BasicKnowledge/classes/stock.h
+CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.obj
+ F:/CLion-workspace/BasicKnowledge/friendClass/TV.cpp
+ F:/CLion-workspace/BasicKnowledge/friendClass/TV.h
 CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj
  F:/CLion-workspace/BasicKnowledge/lib/coordin.h
  F:/CLion-workspace/BasicKnowledge/lib/function.cpp
@@ -55,6 +58,7 @@ CMakeFiles/BasicKnowledge.dir/main.cpp.obj
  F:/CLion-workspace/BasicKnowledge/ML/Worker.h
  F:/CLion-workspace/BasicKnowledge/abc/abc.h
  F:/CLion-workspace/BasicKnowledge/classes/stock.h
+ F:/CLion-workspace/BasicKnowledge/friendClass/TV.h
  F:/CLion-workspace/BasicKnowledge/lib/coordin.h
  F:/CLion-workspace/BasicKnowledge/lib/namespace.h
  F:/CLion-workspace/BasicKnowledge/main.cpp

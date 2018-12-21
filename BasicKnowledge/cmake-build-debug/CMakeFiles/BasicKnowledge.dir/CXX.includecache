@@ -10,10 +10,6 @@ F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
 iostream
 -
 
-F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.cpp
-StackTemp.h
-F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
-
 F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
 iostream
 -
@@ -70,6 +66,10 @@ string
 iostream
 -
 cstring
+-
+
+F:/CLion-workspace/BasicKnowledge/friendClass/TV.h
+iostream
 -
 
 F:/CLion-workspace/BasicKnowledge/lib/coordin.h
@@ -139,4 +139,6 @@ ClassTemplate/Queue.h
 F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h
 ClassTemplate/StackTemp.h
 F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h
+friendClass/TV.h
+F:/CLion-workspace/BasicKnowledge/friendClass/TV.h
 

@@ -38,6 +38,9 @@ CMakeFiles/BasicKnowledge.dir/abc/abc.cpp.obj: ../abc/abc.h
 CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj: ../classes/stock.cpp
 CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.obj: ../classes/stock.h
 
+CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.obj: ../friendClass/TV.cpp
+CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.obj: ../friendClass/TV.h
+
 CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj: ../lib/coordin.h
 CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj: ../lib/function.cpp
 CMakeFiles/BasicKnowledge.dir/lib/function.cpp.obj: ../lib/namespace.h
@@ -54,6 +57,7 @@ CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../Domain/time.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../ML/Worker.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../abc/abc.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../classes/stock.h
+CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../friendClass/TV.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../lib/coordin.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../lib/namespace.h
 CMakeFiles/BasicKnowledge.dir/main.cpp.obj: ../main.cpp

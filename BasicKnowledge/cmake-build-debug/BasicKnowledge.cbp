@@ -152,6 +152,12 @@
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/classes/stock.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/friendClass/TV.cpp">
+			<Option target="BasicKnowledge"/>
+		</Unit>
+		<Unit filename="F:/CLion-workspace/BasicKnowledge/friendClass/TV.h">
+			<Option target="BasicKnowledge"/>
+		</Unit>
 		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/coordin.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>

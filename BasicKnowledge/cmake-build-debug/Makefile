@@ -446,6 +446,33 @@ classes/stock.cpp.s:
 	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/classes/stock.cpp.s
 .PHONY : classes/stock.cpp.s
 
+friendClass/TV.obj: friendClass/TV.cpp.obj
+
+.PHONY : friendClass/TV.obj
+
+# target to build an object file
+friendClass/TV.cpp.obj:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.obj
+.PHONY : friendClass/TV.cpp.obj
+
+friendClass/TV.i: friendClass/TV.cpp.i
+
+.PHONY : friendClass/TV.i
+
+# target to preprocess a source file
+friendClass/TV.cpp.i:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.i
+.PHONY : friendClass/TV.cpp.i
+
+friendClass/TV.s: friendClass/TV.cpp.s
+
+.PHONY : friendClass/TV.s
+
+# target to generate assembly for a file
+friendClass/TV.cpp.s:
+	$(MAKE) -f CMakeFiles\BasicKnowledge.dir\build.make CMakeFiles/BasicKnowledge.dir/friendClass/TV.cpp.s
+.PHONY : friendClass/TV.cpp.s
+
 lib/function.obj: lib/function.cpp.obj
 
 .PHONY : lib/function.obj
@@ -545,6 +572,9 @@ help:
 	@echo ... classes/stock.obj
 	@echo ... classes/stock.i
 	@echo ... classes/stock.s
+	@echo ... friendClass/TV.obj
+	@echo ... friendClass/TV.i
+	@echo ... friendClass/TV.s
 	@echo ... lib/function.obj
 	@echo ... lib/function.i
 	@echo ... lib/function.s
