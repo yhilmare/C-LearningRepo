@@ -26,6 +26,9 @@
 #include "ClassTemplate/Queue.h"
 #include "ClassTemplate/StackTemp.h"
 #include "friendClass/TV.h"
+#include <cstdlib>
+#include <exception>
+#include <typeinfo>
 
 using std::cout;
 using std::cin;
@@ -63,7 +66,10 @@ int main() {
     Chapter15();
     return 0;
 }
-
+double hmean(double a, double b);
+void exceptionfunc();
+void except_func();
+void my_quit();
 void Chapter15(){
     using namespace std;
 
@@ -85,6 +91,75 @@ void Chapter15(){
         Remote_1 r = Remote_1();
         r.func(tv);
     }
+    /*
+     * 内部嵌套类和内部嵌套结构体是一样的。只不过结构体的所有成员变量都相当于类的共有变量而已，嵌套类的重点在于作用域：包含嵌套类的类可以使用嵌套类
+     * 所有类型的成员，从嵌套类包含类派生出的类可以使用除private的其他两个类型的成员，最后通过对象只能使用嵌套类的公有成员（一句话，嵌套类的访问控制方式
+     * 和类继承相似）
+     * */
+
+    //异常
+    {
+        /*
+         * c++中的异常和java中的异常非常类似，只是没有java中异常设计的那么良好，总结出了以下五个知识点：
+         * 1. 异常中抛出了什么就在catch中捕获什么，例如throw "Bad Exception"抛出了一个字符串或者说是字符指针，那么在相应的catch中就要catch(const char *s)
+         * 2. 异常处理中要注意栈解退的问题，通常抛出的异常会逐层上抛，直到有一个catch将其接住。否则将会引发程序崩溃。栈解退过程中自动变量都将被释放，但是通过new
+         *    申请的内存则不会，需要注意这一点。
+         * 3. 可以使用catch(...)或者catch(exception &e)来捕获任何种类的异常。
+         * 4. 可以通过继承exception类来定义自己的异常，在这里需要重载what方法。当然c++中有一些已经定义好的异常可以直接用。
+         * 5. 可以通过设置set_terminite或者set_unexpected方法来重新定义未捕获异常和意外异常的默认处理方式（默认是直接abort终结程序）。
+         * */
+        try{
+            hmean(10, -10);
+        }catch(const char *s){
+            cout << s << endl;
+        }
+        try{
+            exceptionfunc();
+        }catch(const char *s){
+            cout << s << endl;
+        }
+        try{
+            except_func();
+        }catch(...){//捕获任何类型的异常
+
+        }
+        set_terminate(my_quit);//指定未捕获异常的处理函数
+        hmean(5, -5);
+    }
+
+    /*
+     * RTTI
+     * 所谓RTTI指的是运行时类型转换，要记住三个操作：
+     * 1. dynamic_cast<>():该操作提供动态类型转换，可以转换指针：A *p = dynamic_cast<A *>(p1)，也可以用来转换引用:A &a = dynamic_cast<A &>(b),
+     *    需要注意的是：如果转换不成功（通常是将子类指针或引用指向基类对象地址或对象本身），那么指针转换会返回一个空指针，而引用转换则会抛出异常bad_cast
+     * 2. typeid和typeinfo：使用这个需要导入头文件#include<typeinfo>，typeid是一个函数，接收类或对象，返回一个typeinfo对象，该对象用于标识传入
+     *    typeid函数参数的类型。通常typeinfo对象有很多种实现，但都有name方法。
+     * */
+
+}
+void my_quit(){
+    cout << "somthing happen" << endl;
+    exit(5);
+}
+void except_func(){
+    throw "Ede";
+}
+
+void exceptionfunc(){
+    try{
+        hmean(10, -10);
+    }catch(const char *s){
+        cout << s << endl;
+        throw;//重新抛出异常
+    }
+}
+
+double hmean(double a, double b) {
+    if (a == -b){
+        throw "bad hmean() arguments: a = -b not allowed";
+//        abort();//强制关闭程序，且后果不明确，不建议使用
+    }
+    return 2.0 * a * b / (a + b);
 }
 class cust{
 private:
