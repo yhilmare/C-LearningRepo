@@ -47,6 +47,7 @@ void Chapter12();
 void Chapter13();
 void Chapter14();
 void Chapter15();
+void Chapter16();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -63,8 +64,16 @@ int main() {
 //    Chapter11();
 //    Chapter12();
 //    Chapter14();
-    Chapter15();
+//    Chapter15();
+    Chapter16();
     return 0;
+}
+
+void Chapter16(){
+    using namespace std;
+
+    string str = "Hello,world";
+    cout << str.find("wq", 0) << endl;
 }
 double hmean(double a, double b);
 void exceptionfunc();
