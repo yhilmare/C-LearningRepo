@@ -29,6 +29,7 @@
 #include <cstdlib>
 #include <exception>
 #include <typeinfo>
+#include <memory>
 
 using std::cout;
 using std::cin;
@@ -71,9 +72,61 @@ int main() {
 
 void Chapter16(){
     using namespace std;
+    {
+        /*
+         * string类型：没什么可学的
+         * */
+        string str = "我是一个中国人";
+        cout << str.find("wq", 0) << endl;
+        cout << "length is " << str.length() << ", capacity is " <<str.capacity() << endl;
+        cout << str.c_str() << endl;//返回一个C语言风格的字符串
 
-    string str = "Hello,world";
-    cout << str.find("wq", 0) << endl;
+        cout << sizeof(char32_t) << endl;
+    }
+    {
+        /*
+         * 智能指针其实也是一个模板对象，它用来模拟指针的行为，它优于传统指针的一点是：智能指针可以提供自动内存释放，这样就不用担心内存泄露的问题
+         * 比如在一个函数中使用智能指针申请内存，而该函数由于某种原因引发异常，传统的指针将会引发内存泄露而智能指针将不会。智能指针的行为和传统指针
+         * 非常相似，C++中有三种实现：auto_ptr, shared_ptr, unique_ptr这三种智能指针中第一种auto_ptr已经被标识为过时的。这三种智能指针的区别主要在于
+         * 指针的赋值上。通常情况下传统指针可以进行赋值操作，也就是两个指针指向同一块内存，这并没有什么问题。然而智能指针提供了自动的内存delete操作，
+         * 这就会引发问题。因此三种智能指针的区别主要在于指针赋值和使用new或new[]方式申请内存上：
+         * 1. auto_ptr：这种智能指针最不安全，当程序中将一个aupo_ptr指针赋值给另一个auto_ptr指针时，另一个auto_ptr指针对内存的指向将失效，也就是说另一个
+         *    auto_ptr对象中维护的指针将指向NULL，这可能会导致非常严重的运行时异常（如果在auto_ptr丧失对相应内存的指向时仍然使用这个指针时）。另外，auto_ptr
+         *    只能处理使用new运算符申请的内存，也就是说使用new[]申请的内存auto_ptr是无法管理的。
+         * 2. unique_ptr：这是C++11中新增的，它和auto_ptr十分相似，唯一的区别仍然在于指针赋值时，unique_ptr完全不允许指针赋值，出现这样的操作时unique_ptr
+         *    会引发错误，当然编译时错误要比运行时错误好得多。但是跟auto_ptr不同的是，如果使用了new[]运算符申请内存，那么unique_ptr是唯一的选择，因为下面介绍的
+         *    shared_ptr同样不能处理new[]申请的内存。
+         * 3. shared_ptr：这也是C++11中新定义的智能指针，他跟auto_ptr和unique_ptr不同的是，这种智能指针可以处理指针赋值的操作，shared_ptr处理指针赋值操作
+         *    的内部原理是基于引用计数原则，这和java中的垃圾回收机制比较相似，但是shared_ptr和auto_ptr相同，只能处理使用new运算符申请的内存，对于new[]申请的内存
+         *    无能为力。
+         * */
+        unique_ptr<string> ptr = unique_ptr<string>(new string("Hello,world"));
+        cout << (*ptr) << "'s length is " << ptr->length() << endl;
+        cout << sizeof(ptr) << endl;
+
+        typedef shared_ptr<string> smart_ptr;//如果将shared_ptr换成unique_ptr或auto_ptr则都会引发错误，区别是前者是编译时错误，后者是运行时错误
+        smart_ptr list[5] = {
+                smart_ptr(new string("Hello,world")),
+                smart_ptr(new string("I am a Chinese")),
+                smart_ptr(new string("I love my country")),
+                smart_ptr(new string("Xi'an is a beautiful city")),
+                smart_ptr(new string("I com from Hanzhong"))
+        };
+        smart_ptr p1 = list[2];
+        for (int i = 0; i < 5; i ++){
+            cout << *list[i] << endl;
+        }
+    }
+    {
+        /*
+         * STL主要讲了vector的相关知识，没有什么新的东西
+         * */
+       vector<int> v = {1,2,3,4,5,6,7,8,9};
+       v.push_back(10);//相当于append
+       for (vector<int>::iterator iter = v.begin(); iter != v.end(); iter ++){//迭代器
+           cout << *iter << " ";
+       }
+    }
 }
 double hmean(double a, double b);
 void exceptionfunc();
