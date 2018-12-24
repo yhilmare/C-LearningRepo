@@ -79,7 +79,7 @@ void Chapter17(){
     using namespace std;
     cerr << "somthing bad" << endl;
     clog << "this is a log" << endl;
-    
+
 }
 template <class T> void showItem(T);
 template <class T> bool sortItem(T item_1, T item_2);
