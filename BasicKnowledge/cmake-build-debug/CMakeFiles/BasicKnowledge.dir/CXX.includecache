@@ -149,4 +149,10 @@ typeinfo
 -
 memory
 -
+iterator
+-
+map
+-
+cstdio
+-
 

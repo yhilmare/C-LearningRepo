@@ -30,6 +30,9 @@
 #include <exception>
 #include <typeinfo>
 #include <memory>
+#include <iterator>
+#include <map>
+#include <cstdio>
 
 using std::cout;
 using std::cin;
@@ -49,6 +52,7 @@ void Chapter13();
 void Chapter14();
 void Chapter15();
 void Chapter16();
+void Chapter17();
 
 const std::string inputPath = R"(F:\CLion-workspace\LICENSE)";
 const std::string outputPath = R"(F:\CLion-workspace\OUTPUT\output.txt)";
@@ -66,10 +70,19 @@ int main() {
 //    Chapter12();
 //    Chapter14();
 //    Chapter15();
-    Chapter16();
+//    Chapter16();
+    Chapter17();
     return 0;
 }
 
+void Chapter17(){
+    using namespace std;
+    cerr << "somthing bad" << endl;
+    clog << "this is a log" << endl;
+    
+}
+template <class T> void showItem(T);
+template <class T> bool sortItem(T item_1, T item_2);
 void Chapter16(){
     using namespace std;
     {
@@ -120,13 +133,59 @@ void Chapter16(){
     {
         /*
          * STL主要讲了vector的相关知识，没有什么新的东西
+         *
          * */
        vector<int> v = {1,2,3,4,5,6,7,8,9};
        v.push_back(10);//相当于append
        for (vector<int>::iterator iter = v.begin(); iter != v.end(); iter ++){//迭代器
            cout << *iter << " ";
        }
+       cout << endl;
     }
+    {
+        /*
+         * 泛型编程：
+         * 1. 迭代器：注意一下C++自定义的几个迭代器就好了。
+         * 2. 容器：注意使用就好了，没有特别的地方，配合迭代器使用。
+         * */
+        vector<int> v = {1,2,3,4,5,6,7,8,9};
+        ostream_iterator<int, char> iter(cout, ",");
+        copy(v.begin(), v.end(), iter);
+        cout << endl;
+        copy(v.rbegin(), v.rend(), iter);
+        cout << endl;
+        for (vector<int>::reverse_iterator it = v.rbegin(); it != v.rend(); ++it){
+            cout << *it << " ";
+        }
+        cout << endl;
+        for_each(v.begin(), v.end(), showItem<int>);
+        sort(v.begin(), v.end(), sortItem<int>);
+        cout << endl;
+        copy(v.begin(), v.end(), iter);
+        cout << endl;
+
+        map<const int, string> m;
+        pair<const int, string> pa(5, "David");
+        m.insert(pa);
+        for(map<const int, string>::iterator it = m.begin(); it != m.end(); it ++){
+            cout << (*it).first << " - " << (*it).second;
+        }
+        cout << endl << m.size() << endl;
+    }
+    {
+        /*
+         * 函数对象其实就是普通的对象，他只是通过重载operator()运算符来模拟函数的调用
+         * */
+    }
+}
+template <class T> bool sortItem(T item_1, T item_2){
+    if (item_1 >= item_2){
+        return true;
+    }
+    return false;
+}
+template <class T> void showItem(T iter){
+    cout << iter << ", ";
 }
 double hmean(double a, double b);
 void exceptionfunc();
