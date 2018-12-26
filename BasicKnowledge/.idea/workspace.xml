@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BasicKnowledge.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,7 @@
     <session id="1652418038">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="38" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="8" />
           <entry key="project.open.time.4" value="30" />
@@ -39,7 +40,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="71333" />
+          <entry key="cpp" value="71402" />
           <entry key="h" value="16746" />
           <entry key="py" value="18" />
           <entry key="txt" value="19" />
@@ -47,7 +48,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="88079" />
+          <entry key="ObjectiveC" value="88148" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Python" value="18" />
         </counts>
@@ -56,28 +57,28 @@
         <counts>
           <entry key="Makefile" value="6" />
           <entry key="Makefile2" value="3" />
-          <entry key="c" value="3" />
+          <entry key="c" value="4" />
           <entry key="cbp" value="1" />
           <entry key="cmake" value="6" />
-          <entry key="cpp" value="75" />
+          <entry key="cpp" value="81" />
           <entry key="cxx" value="1" />
           <entry key="groovy" value="1" />
-          <entry key="h" value="90" />
+          <entry key="h" value="92" />
           <entry key="http" value="1" />
           <entry key="iosfwd" value="2" />
           <entry key="iostream" value="2" />
           <entry key="make" value="1" />
           <entry key="ostream" value="2" />
           <entry key="py" value="1" />
-          <entry key="txt" value="10" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeCache.txt" value="5" />
-          <entry key="CMakeLists.txt" value="10" />
+          <entry key="CMakeLists.txt" value="11" />
           <entry key="HTTP Request" value="1" />
-          <entry key="ObjectiveC" value="175" />
+          <entry key="ObjectiveC" value="184" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="Python" value="1" />
           <entry key="Scratch" value="1" />
@@ -93,29 +94,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+            <state relative-caret-position="507">
+              <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/abc/abc.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/abc/abc.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -140,6 +123,7 @@
       <find>vector</find>
       <find>new</find>
       <find>**</find>
+      <find>Hello</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,7 +173,9 @@
         <option value="$PROJECT_DIR$/ClassTemplate/StackTemp.cpp" />
         <option value="$PROJECT_DIR$/abc/abc.cpp" />
         <option value="$PROJECT_DIR$/abc/abc.h" />
+        <option value="F:/BasicKnowledge/classes/stock.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="F:/BasicKnowledge/main.cpp" />
       </list>
     </option>
   </component>
@@ -199,7 +185,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="231" />
     <option name="y" value="3" />
     <option name="width" value="1400" />
@@ -226,6 +212,11 @@
               <item name="BasicKnowledge" type="462c0819:PsiDirectoryNode" />
               <item name="abc" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BasicKnowledge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasicKnowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -236,7 +227,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -346,12 +337,12 @@
       <workItem from="1545662749273" duration="12000" />
       <workItem from="1545704308185" duration="5913000" />
       <workItem from="1545746843639" duration="5000" />
-      <workItem from="1545787986785" duration="2301000" />
+      <workItem from="1545787986785" duration="7961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="382208000" />
+    <option name="totallyTimeSpent" value="387868000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -364,13 +355,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49851632" visible="true" weight="0.14179105" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49851632" visible="true" weight="0.14179105" />
       <window_info id="Structure" order="1" sideWeight="0.5014837" side_tool="true" weight="0.12633263" />
       <window_info id="Favorites" order="2" sideWeight="0.5014837" side_tool="true" weight="0.12633263" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2993763" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2993763" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,36 +412,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update at Nov 18th" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/namespace.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" column="18" lean-forward="true" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/function.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/abc/Person.cpp" />
-    <entry file="file://$PROJECT_DIR$/abc/Person.h" />
-    <entry file="file://$PROJECT_DIR$/Domain/Stack.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/time.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Domain/String.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -623,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/abc/abc.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1500" />
@@ -648,9 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -661,10 +613,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../cJSONFiles/cJSON/cJSON.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12840" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/stock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="e#112#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/BasicKnowledge/classes/stock.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#48#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/BasicKnowledge/classes/stock.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#112#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/stock.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1079">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <element signature="e#48#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abc/abc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/BasicKnowledge/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-end-line="72" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+        <state relative-caret-position="507">
+          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
