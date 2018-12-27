@@ -66,13 +66,12 @@ int main() {
 //    Chapter8();
 //    Chapter9();
 //    Chapter10();
-    Chapter11();
-    Chapter12();
-    Chapter14();
+//    Chapter11();
+//    Chapter12();
+//    Chapter14();
 //    Chapter15();
-    Chapter16();
+//    Chapter16();
     Chapter17();
-    cin.get();
     return 0;
 }
 

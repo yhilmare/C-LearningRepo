@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="F:/CLion-workspace/BasicKnowledge/cmake-build-debug"/>
+				<Option working_dir="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="BasicKnowledge">
-				<Option output="F:/CLion-workspace/BasicKnowledge/cmake-build-debug/BasicKnowledge.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="F:/CLion-workspace/BasicKnowledge/cmake-build-debug"/>
+				<Option output="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/BasicKnowledge.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 BasicKnowledge"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 BasicKnowledge"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="BasicKnowledge/fast">
-				<Option output="F:/CLion-workspace/BasicKnowledge/cmake-build-debug/BasicKnowledge.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="F:/CLion-workspace/BasicKnowledge/cmake-build-debug"/>
+				<Option output="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/BasicKnowledge.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,124 +53,124 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 BasicKnowledge/fast"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 BasicKnowledge/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="F:/CLion-workspace/BasicKnowledge/cmake-build-debug"/>
+				<Option working_dir="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="F:/CLion-workspace/BasicKnowledge/cmake-build-debug"/>
+				<Option working_dir="F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/CLion-workspace/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;F:/repos/C-LearningRepo/BasicKnowledge/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/ClassTemplate/Queue.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/Queue.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/ClassTemplate/Queue.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/ClassTemplate/StackTemp.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/ClassTemplate/StackTemp.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/ClassTemplate/StackTemp.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Date.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Date.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Date.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Date.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Manager.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Manager.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Manager.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Manager.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Person.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Person.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Person.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Person.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Stack.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Stack.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Stack.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Stack.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/String.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/String.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/String.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/String.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Student.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Student.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/Student.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/Student.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/time.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/time.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/Domain/time.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/Domain/time.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/ML/Worker.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/ML/Worker.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/ML/Worker.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/ML/Worker.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/abc/abc.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/abc/abc.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/abc/abc.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/abc/abc.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/classes/stock.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/classes/stock.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/classes/stock.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/classes/stock.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/friendClass/TV.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/friendClass/TV.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/friendClass/TV.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/friendClass/TV.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/coordin.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/lib/coordin.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/function.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/lib/function.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/lib/namespace.h">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/lib/namespace.h">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/main.cpp">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/main.cpp">
 			<Option target="BasicKnowledge"/>
 		</Unit>
-		<Unit filename="F:/CLion-workspace/BasicKnowledge/CMakeLists.txt">
+		<Unit filename="F:/repos/C-LearningRepo/BasicKnowledge/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
