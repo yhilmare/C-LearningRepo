@@ -24,7 +24,7 @@ public:
     template<class V>
     void getname(V v);
 
-    friend void show(const StackTemp &s);
+    friend void show(const StackTemp<T> &s);
 
     friend void show_1<>(StackTemp<T> &);
 
